@@ -26,7 +26,7 @@ public class TileManager {
     }
     public void getTileImage(){
         try {
-            // plain grass
+            // plain grass(grass-0)
             tile[0] = new Tile();
             tile[0].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/grass-0.png"));
 
