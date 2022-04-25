@@ -2,14 +2,17 @@ package main;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+
+import java.io.File;
 import java.net.URL;
 
 public class Sound {
     Clip clip;
+    Clip BGsound;
     URL soundURL[] = new URL[30];
 
     public Sound(){
-        soundURL[0] = getClass().getResource("/res/sound/Paopaosound2.wav");
+        soundURL[0] = getClass().getResource("/res/sound/Paopaosound.wav");
         soundURL[1] = getClass().getResource("/res/sound/MenuSound1.wav");
     }
     public void setFile(int i){
