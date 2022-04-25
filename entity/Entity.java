@@ -7,7 +7,11 @@ public class Entity {
 
     //player position in world map
     public int worldX,worldY;
+
+    //player default status:
     public int speed;
+    public int HP;
+    public int Attack;
 
     // action pao stand
     public BufferedImage downstand1,downstand2,downstand3,downstand4,
@@ -19,6 +23,9 @@ public class Entity {
                         downwalk1,downwalk2,downwalk3,downwalk4,
                         leftwalk1,leftwalk2,leftwalk3,leftwalk4,
                         rightwalk1,rightwalk2,rightwalk3,rightwalk4;
+
+    //Nomjib
+    public BufferedImage NJstand1,NJstand2;
     public String direction;
     public String action;
     public int spriteCounter = 0;

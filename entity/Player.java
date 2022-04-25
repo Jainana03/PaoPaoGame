@@ -38,6 +38,8 @@ public class Player extends Entity{
     public void setDefaultValues (){
         worldX = gp.tileSize*24;
         worldY = gp.tileSize*24;
+        HP = 10;
+        Attack = 2;
         speed = 4;
         direction = "right";
         action = "stand";
@@ -274,5 +276,10 @@ public class Player extends Entity{
         }
         
         g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+    }
+    public void endGame(){
+        gp.ui.gameFinished = true;
+        //gp.stopMusic();
+
     }
 }
