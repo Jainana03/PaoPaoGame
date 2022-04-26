@@ -40,7 +40,7 @@ public class Player extends Entity{
         worldY = gp.tileSize*24;
         Power = 2;
         speed = 4;
-        direction = "right";
+        direction = "down";
         action = "stand";
     }
     public void getPlayerImage(){
