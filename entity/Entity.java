@@ -10,8 +10,7 @@ public class Entity {
 
     //player default status:
     public int speed;
-    public int HP;
-    public int Attack;
+    public int Power;
 
     // action pao stand
     public BufferedImage downstand1,downstand2,downstand3,downstand4,

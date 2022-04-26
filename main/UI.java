@@ -84,8 +84,7 @@ public class UI {
             if(gp.gameState == gp.playState){
                 g2.setColor(Color.white);
                 g2.setFont(g2.getFont().deriveFont(Font.PLAIN,20F));
-                g2.drawString("HP : "+gp.player.HP,25,gp.tileSize*1);
-                g2.drawString("ATK : "+gp.player.Attack,25,gp.tileSize*2);
+                g2.drawString("Power : "+gp.player.Power,25,gp.tileSize*2);
                 playTime += (double)1/60;
 
                 g2.setColor(Color.white);

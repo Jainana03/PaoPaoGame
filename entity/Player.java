@@ -38,8 +38,7 @@ public class Player extends Entity{
     public void setDefaultValues (){
         worldX = gp.tileSize*24;
         worldY = gp.tileSize*24;
-        HP = 10;
-        Attack = 2;
+        Power = 2;
         speed = 4;
         direction = "right";
         action = "stand";
