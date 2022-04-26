@@ -5,7 +5,7 @@ import javax.imageio.ImageIO;
 
 public class OBJ extends SuperObject{
     public OBJ(){
-        name = "Key";
+        name = "x2HP";
 
         try {
             image = ImageIO.read(getClass().getResourceAsStream(""));

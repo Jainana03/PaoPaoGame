@@ -86,12 +86,10 @@ public class UI {
                 g2.setFont(g2.getFont().deriveFont(Font.PLAIN,20F));
                 g2.drawString("HP : "+gp.player.HP,25,gp.tileSize*1);
                 g2.drawString("ATK : "+gp.player.Attack,25,gp.tileSize*2);
-
                 playTime += (double)1/60;
 
                 g2.setColor(Color.white);
                 g2.setFont(g2.getFont().deriveFont(Font.PLAIN,15F));
-
                 //TIME 
                 if (playTime > 60){
                     min += 1;
@@ -126,15 +124,6 @@ public class UI {
         g2.setColor(Color.black);
         String text = "PAUSED";
         showMessageCenter(g2, text);
-    }
-    public void getImage(String filepath){
-        try{
-            image = ImageIO.read(getClass().getResourceAsStream(filepath));
-        }catch(IOException e){
-            e.printStackTrace();
-            System.out.println("ERROR : lost BG image");
-        }
-        
     }
     public void drawTitleScreen(){
         int x = 0;
