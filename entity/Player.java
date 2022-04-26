@@ -274,8 +274,25 @@ public class Player extends Entity{
             }
             
         }
+        int x = screenX;
+        int y = screenY;
+        if(screenX > worldX){
+            x = worldX;
+        }
+        if(screenY > worldY){
+            y = worldY;
+        }
+        int rightOffset = gp.ScreenWidth - screenX;
+            if(rightOffset > gp.worldWidth - worldX){
+                x = gp.ScreenWidth - (gp.worldWidth - worldX);
+            }
+            
+        int bottomOffset = gp.ScreenHeight - screenY;
+            if(bottomOffset > gp.worldHeight - worldY){
+                y = gp.ScreenHeight - (gp.worldHeight - worldY);
+            }
         
-        g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+        g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
     }
     public void endGame(){
         gp.ui.gameFinished = true;

@@ -107,6 +107,22 @@ public class TileManager {
             int screenX = worldX - gp.player.worldX + gp.player.screenX;
             int screenY = worldY - gp.player.worldY + gp.player.screenY;
 
+            //Stop camera at the edge
+            if(gp.player.screenX > gp.player.worldX){
+                screenX = worldX;
+            }
+            if(gp.player.screenY > gp.player.worldY){
+                screenY = worldY;
+            }
+            int rightOffset = gp.ScreenWidth - gp.player.screenX;
+            if(rightOffset > gp.worldWidth - gp.player.worldX){
+                screenX = gp.ScreenWidth - (gp.worldWidth - worldX);
+            }
+            int bottomOffset = gp.ScreenHeight - gp.player.screenY;
+            if(bottomOffset > gp.worldHeight - gp.player.worldY){
+                screenY = gp.ScreenHeight - (gp.worldHeight - worldY);
+            }
+
             //draw map only tiles that player can see on the screen
             if(worldX + gp.tileSize > gp.player.worldX - gp.player.screenX &&
                 worldX - gp.tileSize < gp.player.worldX + gp.player.screenX &&
@@ -114,6 +130,12 @@ public class TileManager {
                 worldY - gp.tileSize < gp.player.worldY + gp.player.screenY){
                     g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
                 }
+            else if(gp.player.screenX > gp.player.worldX ||
+            gp.player.screenY > gp.player.worldY ||
+            rightOffset > gp.worldWidth - gp.player.worldX ||
+            bottomOffset > gp.worldHeight - gp.player.worldY){
+                g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+            }
             
             worldCol++;
 

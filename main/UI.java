@@ -14,6 +14,7 @@ import java.text.DecimalFormat;
 public class UI {
     GamePanel gp;
     Font pixelFont;
+    Graphics2D g2;
     public boolean messageOn = false;
     public String message = "";
     int messageCounter = 0;
@@ -42,20 +43,28 @@ public class UI {
         messageOn = true;
     }
     public void showMessageCenter (Graphics2D g2,String text){
-            int textLength;
-            int x;
-            int y;
-
-            textLength = (int)g2.getFontMetrics().getStringBounds(text, g2).getWidth();
-            x = gp.ScreenWidth/2 - textLength/2;
-            y = gp.ScreenHeight/2 - (gp.tileSize*3);
+            int x = getXforCenteredText(text);
+            int y = gp.ScreenHeight/2;
+            
             g2.drawString(text, x, y);
     }
+    public int getXforCenteredText (String text){
+        int textLength = (int)g2.getFontMetrics().getStringBounds(text, g2).getWidth();
+        int x = gp.ScreenWidth/2 - textLength/2;
+        return x;
+    }
     public void draw(Graphics2D g2){
-        if(gameFinished){
-            g2.setFont(pixelFont);
-            g2.setColor(Color.white);
+        this.g2 = g2;
+        g2.setFont(pixelFont);
+        g2.setColor(Color.white);
+        if(gp.gameState == gp.playState){
+            //playstate
+        }
+        if(gp.gameState == gp.pauseState){
+            drawPauseScreen();
+        }
 
+        if(gameFinished){
             showMessageCenter(g2, "Congratulations!");
             showMessageCenter(g2, "The end!");
             showMessageCenter(g2, "Your play time is "+min+"."+dFormat2.format(playTime)+" min");
@@ -63,27 +72,32 @@ public class UI {
             gp.gameThread = null;
 
         }else{
-            g2.setFont(pixelFont);
             g2.setColor(Color.white);
+            g2.setFont(g2.getFont().deriveFont(Font.PLAIN,20F));
             g2.drawString("HP : "+gp.player.HP,25,gp.tileSize*1);
             g2.drawString("ATK : "+gp.player.Attack,25,gp.tileSize*2);
 
-            //TIME
-            playTime += (double)1/60;
+            if(gp.gameState == gp.playState){
+                playTime += (double)1/60;
+            }
+            g2.setColor(Color.white);
+            g2.setFont(g2.getFont().deriveFont(Font.PLAIN,15F));
+
+            //TIME 
             if (playTime > 60){
                 min += 1;
                 playTime -= 60;
             }
             if (min == 0){
-                g2.drawString("Time : "+dFormat.format(playTime)+" sec", gp.tileSize*13, gp.tileSize*11);
+                g2.drawString("Time : "+dFormat.format(playTime)+" sec", gp.tileSize*13, gp.tileSize*10);
             }else{
-                g2.drawString("Time : "+min+"."+dFormat2.format(playTime)+" min", gp.tileSize*13, gp.tileSize*11);
+                g2.drawString("Time : "+min+"."+dFormat2.format(playTime)+" min", gp.tileSize*13, gp.tileSize*10);
             }
             
 
 
             if(messageOn){
-                g2.setFont(pixelFont.deriveFont(30F));
+                g2.setFont(g2.getFont().deriveFont(Font.PLAIN,20F));
                 g2.drawString(message, gp.tileSize/2, gp.tileSize*5);
                 messageCounter++;
                 if(messageCounter > 120){
@@ -94,6 +108,13 @@ public class UI {
 
         }
         
+
+    }
+    public void drawPauseScreen(){
+        g2.setFont(g2.getFont().deriveFont(Font.PLAIN,80F));
+        g2.setColor(Color.black);
+        String text = "PAUSED";
+        showMessageCenter(g2, text);
 
     }
 }
