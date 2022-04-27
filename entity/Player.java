@@ -36,8 +36,8 @@ public class Player extends Entity{
     }
     // start player's position, speed, direction and action
     public void setDefaultValues (){
-        worldX = gp.tileSize*24;
-        worldY = gp.tileSize*24;
+        worldX = gp.tileSize*10;
+        worldY = gp.tileSize*48;
         Power = 2;
         speed = 4;
         direction = "down";

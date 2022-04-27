@@ -27,7 +27,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     //world settings
     //maxWorldCol and maxWorldRow use for 50x50 tiles map. if you change map, you should change these border to new one.
-    public final int maxWorldCol = 50;
+    public final int maxWorldCol = 20;
     public final int maxWorldRow = 50;
     public final int worldWidth = tileSize * maxWorldCol;
     public final int worldHeight = tileSize * maxWorldRow;
