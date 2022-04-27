@@ -125,8 +125,6 @@ public class UI {
         showMessageCenter(g2, text);
     }
     public void drawTitleScreen(){
-        int x = 0;
-        int y = 0;
         //Background
         try{
             BGImage = ImageIO.read(getClass().getResourceAsStream("/res/BG/Start-BG-withoutButton.png"));
@@ -145,7 +143,7 @@ public class UI {
             e.printStackTrace();
             System.out.println("ERROR : lost Start-Button image");
         }
-        x = gp.ScreenWidth/2;
+
         g2.drawImage(StartButton, 278, 248, 175, 60, null);
         if(commandNum == 0){
             g2.drawImage(StartButton_C, 278, 248, 175, 60, null);
