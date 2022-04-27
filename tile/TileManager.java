@@ -18,8 +18,10 @@ public class TileManager {
     public Tile[] tile;
     public int mapTileNum[][];
     Random random = new Random();
-    int randomMapsNum = random.nextInt(1,11);
+    int[] mapNum = {1,2,3,4,5,6,7,8,9,10};
+    int randomMapsNum = random.nextInt(10);
     int lastMapsNum = 0;
+
 
     public TileManager(GamePanel gp){
 
@@ -29,12 +31,12 @@ public class TileManager {
         mapTileNum = new int [gp.maxWorldCol][gp.maxWorldRow];
 
         getTileImage();
-        if(randomMapsNum != lastMapsNum){
-            lastMapsNum = randomMapsNum;
+        if(mapNum[randomMapsNum] != lastMapsNum){
+            lastMapsNum = mapNum[randomMapsNum];
             String filepath = "/res/maps/map-"+randomMapsNum+".txt";
             loadMap(filepath);
         }else{
-            randomMapsNum = random.nextInt(1,11);
+            randomMapsNum = random.nextInt(10);
         }
     }
     public void getTileImage(){
