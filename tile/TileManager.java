@@ -6,13 +6,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
+
 import javax.imageio.ImageIO;
+
 import java.awt.Graphics2D;
+
+import java.util.Random;
 
 public class TileManager {
     GamePanel gp;
     public Tile[] tile;
     public int mapTileNum[][];
+    Random random = new Random();
+    int randomNum = random.nextInt(1,11);
+    int lastNum = 0;
 
     public TileManager(GamePanel gp){
 
@@ -22,7 +29,12 @@ public class TileManager {
         mapTileNum = new int [gp.maxWorldCol][gp.maxWorldRow];
 
         getTileImage();
-        loadMap("/res/maps/map-1.txt");
+        if(randomNum != lastNum){
+            String filepath = "/res/maps/map-"+randomNum+".txt";
+            loadMap(filepath);
+        }else{
+            randomNum = random.nextInt(1,11);
+        }
     }
     public void getTileImage(){
         try {
