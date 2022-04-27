@@ -30,6 +30,7 @@ public class TileManager {
 
         getTileImage();
         if(randomNum != lastNum){
+            lastNum = randomNum;
             String filepath = "/res/maps/map-"+randomNum+".txt";
             loadMap(filepath);
         }else{
