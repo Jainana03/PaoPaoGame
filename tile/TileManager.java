@@ -34,6 +34,7 @@ public class TileManager {
         if(mapNum[randomMapsNum] != lastMapsNum){
             lastMapsNum = mapNum[randomMapsNum];
             System.out.println("map number : "+randomMapsNum);
+            System.out.println("This is map-"+mapNum[randomMapsNum]);
             String filepath = "/res/maps/map-"+randomMapsNum+".txt";
             loadMap(filepath);
         }else{
