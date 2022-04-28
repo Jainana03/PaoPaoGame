@@ -20,7 +20,7 @@ public class TileManager {
     Random random = new Random();
     int[] mapNum = {1,2,3,4,5,6,7,8,9,10};
     int randomMapsNum = random.nextInt(10);
-    int lastMapsNum = 0;
+    int lastMapsNum = 11;
 
 
     public TileManager(GamePanel gp){
@@ -33,9 +33,9 @@ public class TileManager {
         getTileImage();
         if(mapNum[randomMapsNum] != lastMapsNum){
             lastMapsNum = mapNum[randomMapsNum];
-            System.out.println("map number : "+randomMapsNum);
+            System.out.println("map random number : "+randomMapsNum);
             System.out.println("This is map-"+mapNum[randomMapsNum]);
-            String filepath = "/res/maps/map-"+randomMapsNum+".txt";
+            String filepath = "/res/maps/map-"+mapNum[randomMapsNum]+".txt";
             loadMap(filepath);
         }else{
             randomMapsNum = random.nextInt(10);
