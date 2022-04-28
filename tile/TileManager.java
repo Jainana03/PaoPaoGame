@@ -33,6 +33,7 @@ public class TileManager {
         getTileImage();
         if(mapNum[randomMapsNum] != lastMapsNum){
             lastMapsNum = mapNum[randomMapsNum];
+            System.out.println("map number : "+randomMapsNum);
             String filepath = "/res/maps/map-"+randomMapsNum+".txt";
             loadMap(filepath);
         }else{
