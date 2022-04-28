@@ -27,7 +27,7 @@ public class TileManager {
 
         this.gp = gp;
 
-        tile = new Tile[10];
+        tile = new Tile[15];
         mapTileNum = new int [gp.maxWorldCol][gp.maxWorldRow];
 
         getTileImage();
@@ -76,7 +76,43 @@ public class TileManager {
             //wood
             tile[7] = new Tile();
             tile[7].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/wood-1.png"));
+
+            //water-grass up
+            tile[8] = new Tile();
+            tile[8].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassup.png"));
+            tile[8].collision = true;
+
+            //water-grass down
+            tile[9] = new Tile();
+            tile[9].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassdown.png"));
+            tile[9].collision = true;
+
+            //water-grass left
+            tile[10] = new Tile();
+            tile[10].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassleft.png"));
+            tile[10].collision = true;
+
+            //water-grass right
+            tile[11] = new Tile();
+            tile[11].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassright.png"));
+            tile[11].collision = true;
             
+            //water-sand up
+            tile[12] = new Tile();
+            tile[12].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sandup.png"));
+
+            //water-sand down
+            tile[13] = new Tile();
+            tile[13].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sanddown.png"));
+
+            //water-sand left
+            tile[14] = new Tile();
+            tile[14].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sandleft.png"));
+
+            //water-sand right
+            tile[15] = new Tile();
+            tile[15].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sandright.png"));
+
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("ERROR : lost tiles file");
