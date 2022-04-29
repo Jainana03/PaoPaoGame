@@ -35,6 +35,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     // FPS
     int FPS = 60;
+    long lastTimeDraw = 0;
 
     // SYSTEM
     TileManager tileM = new TileManager(this);
@@ -83,13 +84,13 @@ public class GamePanel extends JPanel implements Runnable {
         long drawCount = 0;
 
         while(gameThread != null){
-            currentTime = System.nanoTime();
+            //currentTime = System.nanoTime();
 
-            delta += (currentTime - lastTime) / drawInterval;
-            timer += (currentTime - lastTime);
-            lastTime = currentTime;
+            //delta += (currentTime - lastTime) / drawInterval;
+            //timer += (currentTime - lastTime);
+            //lastTime = System.nanoTime();
 
-            if(delta >= 1){
+            /*if(delta >= 1){
                 //Update : update game information
                 update();
     
@@ -98,17 +99,26 @@ public class GamePanel extends JPanel implements Runnable {
 
                 delta--;
                 drawCount++;
+            }*/
+            if(System.nanoTime() - lastTime >= drawInterval) {
+                //Update : update game information
+                update();
+    
+                //Draw : draw the screen with the update information
+                repaint();
+
+                //delta--;
+                drawCount++;
+                lastTime = System.nanoTime();
             }
-            if(timer >= 1000000000){
+            if(System.currentTimeMillis() - lastTimeDraw >= 1000){
                 if(gameState == titleState){
                     drawCount = 0;
-                    timer = 0;
                 }else{
                     System.out.println("FPS : "+drawCount);
                     drawCount = 0;
-                    timer = 0;
                 }
-                
+                lastTimeDraw = System.currentTimeMillis();
             }
             
 
