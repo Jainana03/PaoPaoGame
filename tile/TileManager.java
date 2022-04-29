@@ -31,6 +31,8 @@ public class TileManager {
         mapTileNum = new int [gp.maxWorldCol][gp.maxWorldRow];
 
         getTileImage();
+        loadMap("/res/maps/map-1.txt");
+        /*
         if(mapNum[randomMapsNum] != lastMapsNum){
             lastMapsNum = mapNum[randomMapsNum];
             System.out.println("map random number : "+randomMapsNum);
@@ -39,7 +41,7 @@ public class TileManager {
             loadMap(filepath);
         }else{
             randomMapsNum = random.nextInt(10);
-        }
+        }*/
     }
     public void getTileImage(){
         try {
