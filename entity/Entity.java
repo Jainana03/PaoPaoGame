@@ -33,5 +33,9 @@ public class Entity {
     //player collision
     public Rectangle solidArea;
     //check collision if collisionOn is true, Player can't go
-    public boolean collisionOn = false;
+    public boolean collisionUpOn = false;
+    public boolean collisionDownOn = false;
+    public boolean collisionLeftOn = false;
+    public boolean collisionRightOn = false;
+    
 }

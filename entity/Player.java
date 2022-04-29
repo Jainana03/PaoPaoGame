@@ -40,8 +40,8 @@ public class Player extends Entity{
         worldY = gp.tileSize*48;
         Power = 2;
         speed = 4;
-        direction = "down";
-        action = "stand";
+        direction = "right";
+        action = "walk";
     }
     public void getPlayerImage(){
         try {
@@ -89,13 +89,16 @@ public class Player extends Entity{
         }
     }
     public void update(){
+        if(!collisionUpOn){
+            worldY -= 3;
+        }
         //spriteNum use to change player animation and spriteCounter use to count for change animation on time.
         if (keyH.upPressed == true || keyH.downPressed == true||
             keyH.leftPressed == true || keyH.rightPressed == true){
-            if(keyH.upPressed == true){
+            if(keyH.upPressed){
                 direction = "up";
                 action = "walk";
-            }else if(keyH.downPressed == true){
+            }else if(keyH.downPressed){
                 direction = "down";
                 action = "walk";
             }else if(keyH.leftPressed){
@@ -107,11 +110,14 @@ public class Player extends Entity{
             }
 
             //Check tile collision
-            collisionOn = false;
+            collisionUpOn = false;
+            collisionDownOn = false;
+            collisionLeftOn = false;
+            collisionRightOn = false;
             gp.collisionCheck.checkTile(this);
 
             // if collision is false, player can move pass this tile
-            if(!collisionOn){
+            if(!collisionUpOn){
                 switch(direction){
                     case "up" :
                         worldY -= speed;
@@ -145,8 +151,15 @@ public class Player extends Entity{
             // if there's no keys insert then player action will change to stand until new action come in
             action = "stand";
             if(direction.equals("up")){
-                direction = "down";
+                direction = "right";
             }
+            //Check tile collision
+            collisionUpOn = false;
+            collisionDownOn = false;
+            collisionLeftOn = false;
+            collisionRightOn = false;
+            gp.collisionCheck.checkTile(this);
+
             spriteCounter++;
             if (spriteCounter > 30){
                 if (spriteNum == 1){
@@ -290,8 +303,8 @@ public class Player extends Entity{
             if(bottomOffset > gp.worldHeight - worldY){
                 y = gp.ScreenHeight - (gp.worldHeight - worldY);
             }
-        
         g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
+        g2.drawRect(x+12, y+15, 24, 21);
     }
     public void endGame(){
         gp.ui.gameFinished = true;

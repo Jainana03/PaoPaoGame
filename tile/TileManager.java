@@ -89,7 +89,7 @@ public class TileManager {
             tile[9].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassdown.png"));
             tile[9].collision = true;
 
-            //water-grass left
+            //water-grass left 
             tile[10] = new Tile();
             tile[10].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassleft.png"));
             tile[10].collision = true;
