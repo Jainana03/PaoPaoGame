@@ -87,7 +87,7 @@ public class GamePanel extends JPanel implements Runnable {
 
             //delta += (currentTime - lastTime) / drawInterval;
             //timer += (currentTime - lastTime);
-            lastTime = System.nanoTime();
+            //lastTime = System.nanoTime();
 
             /*if(delta >= 1){
                 //Update : update game information
@@ -108,6 +108,7 @@ public class GamePanel extends JPanel implements Runnable {
 
                 //delta--;
                 drawCount++;
+                lastTime = System.nanoTime();
             }
             if(System.currentTimeMillis() - lastTimeDraw >= 1000){
                 if(gameState == titleState){
