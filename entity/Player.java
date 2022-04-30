@@ -39,7 +39,7 @@ public class Player extends Entity{
         worldX = gPanel.tileSize*10;
         worldY = gPanel.tileSize*48;
         Power = 2;
-        speed = 4;
+        speed = 2;
         direction = "right";
         action = "walk";
     }
@@ -133,63 +133,67 @@ public class Player extends Entity{
                         break;
                 }
             }
-            if(collisionUpOn){
-                switch(direction){
-                    case "up" :
-                        break;
-                    case "down" :
-                        worldY += speed;
-                        break;
-                    case "left" :
-                        worldX -= speed;
-                        break;
-                    case "right" : 
-                        worldX += speed;
-                        break;
-                }
-            }
-            if(collisionDownOn){
+            if(!collisionUpOn){
                 switch(direction){
                     case "up" :
                         worldY -= speed;
                         break;
                     case "down" :
+                        
                         break;
                     case "left" :
-                        worldX -= speed;
+                        
                         break;
                     case "right" : 
-                        worldX += speed;
+                        
                         break;
                 }
             }
-            if(collisionLeftOn){
+            if(!collisionDownOn){
                 switch(direction){
                     case "up" :
-                        worldY -= speed;
+                        
                         break;
                     case "down" :
                         worldY += speed;
                         break;
                     case "left" :
+                        
                         break;
                     case "right" : 
-                        worldX += speed;
+                        
                         break;
                 }
             }
-            if(collisionRightOn){
+            if(!collisionLeftOn){
                 switch(direction){
                     case "up" :
-                        worldY -= speed;
+                        
                         break;
                     case "down" :
-                        worldY += speed;
+                        
                         break;
                     case "left" :
                         worldX -= speed;
                         break;
                     case "right" : 
+                        
+                        break;
+                }
+            }
+            if(!collisionRightOn){
+                switch(direction){
+                    case "up" :
+                        
+                        break;
+                    case "down" :
+                        
+                        break;
+                    case "left" :
+                        
+                        break;
+                    case "right" : 
+                        worldX += speed;
                         break;
                 }
             }
