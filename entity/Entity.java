@@ -32,6 +32,8 @@ public class Entity {
 
     //player collision
     public Rectangle solidArea;
+
+    public int solidAreaDefaultX,solidAreaDefaultY;
     //check collision if collisionOn is true, Player can't go
     public boolean collisionUpOn = false;
     public boolean collisionDownOn = false;

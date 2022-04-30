@@ -5,9 +5,9 @@ import javax.imageio.ImageIO;
 
 import main.GamePanel;
 
-public class OBJ extends SuperObject{
-    public OBJ(GamePanel gPanel){
-        name = "x2HP";
+public class OBJ_In extends SuperObject{
+    public OBJ_In(GamePanel gPanel){
+        name = "IncreasePower";
         try {
             image = ImageIO.read(getClass().getResourceAsStream("/res/objects/wood-yellow.png"));
             

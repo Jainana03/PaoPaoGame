@@ -16,6 +16,7 @@ public class Player extends Entity{
 
     public final int screenX;
     public final int screenY;
+    int door = 0;
 
     public Player(GamePanel gPanel,KeyHandler keyH){
         this.gPanel = gPanel;
@@ -28,6 +29,8 @@ public class Player extends Entity{
         solidArea = new Rectangle();
         solidArea.x = 12;
         solidArea.y = 15;
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
         solidArea.width = 24;
         solidArea.height = 21;
 
@@ -116,6 +119,9 @@ public class Player extends Entity{
             collisionRightOn = false;
             gPanel.collisionCheck.checkTile(this);
 
+            int objIndex = gPanel.collisionCheck.checkObject(this, true);
+            PassOBJ(objIndex);
+
             // if collision is false, player can move pass this tile
             if(!collisionUpOn&&!collisionDownOn&&!collisionLeftOn&&!collisionRightOn){
                 switch(direction){
@@ -134,67 +140,23 @@ public class Player extends Entity{
                 }
             }
             if(!collisionUpOn){
-                switch(direction){
-                    case "up" :
-                        worldY -= speed;
-                        break;
-                    case "down" :
-                        
-                        break;
-                    case "left" :
-                        
-                        break;
-                    case "right" : 
-                        
-                        break;
+                if(direction.equals("up")){
+                    worldY -= speed;
                 }
             }
             if(!collisionDownOn){
-                switch(direction){
-                    case "up" :
-                        
-                        break;
-                    case "down" :
-                        worldY += speed;
-                        break;
-                    case "left" :
-                        
-                        break;
-                    case "right" : 
-                        
-                        break;
+                if(direction.equals("down")){
+                    worldY += speed;
                 }
             }
             if(!collisionLeftOn){
-                switch(direction){
-                    case "up" :
-                        
-                        break;
-                    case "down" :
-                        
-                        break;
-                    case "left" :
-                        worldX -= speed;
-                        break;
-                    case "right" : 
-                        
-                        break;
+                if(direction.equals("left")){
+                    worldX -= speed;
                 }
             }
             if(!collisionRightOn){
-                switch(direction){
-                    case "up" :
-                        
-                        break;
-                    case "down" :
-                        
-                        break;
-                    case "left" :
-                        
-                        break;
-                    case "right" : 
-                        worldX += speed;
-                        break;
+                if(direction.equals("right")){
+                    worldX += speed;
                 }
             }
 
@@ -224,6 +186,9 @@ public class Player extends Entity{
             collisionRightOn = false;
             gPanel.collisionCheck.checkTile(this);
 
+            int objIndex = gPanel.collisionCheck.checkObject(this, true);
+            PassOBJ(objIndex);
+
             spriteCounter++;
             if (spriteCounter > 30){
                 if (spriteNum == 1){
@@ -238,8 +203,19 @@ public class Player extends Entity{
                 spriteCounter = 0;
             }
         }
+    }
+    public void PassOBJ(int index){
+        if(index != 999){
+            switch(gPanel.obj[index].name){
+                case "IncreasePower" :
+                    gPanel.obj[index] = null;
+                    break;
+                case "DecreasePower" :
+                    gPanel.obj[index] = null;
+                    break;
+            }
             
-        
+        }
     }
     public void draw(Graphics2D g2){
         BufferedImage image = null;

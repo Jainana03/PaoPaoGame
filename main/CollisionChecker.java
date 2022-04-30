@@ -6,8 +6,8 @@ public class CollisionChecker {
 
     GamePanel gPanel;
 
-    public CollisionChecker(GamePanel gp){
-        this.gPanel = gp;
+    public CollisionChecker(GamePanel gPanel){
+        this.gPanel = gPanel;
     }
     public void checkTile(Entity entity){
         int entityLeftWorldX = entity.worldX + entity.solidArea.x;
@@ -74,6 +74,57 @@ public class CollisionChecker {
             }
             break;
         }
+    }
+    public int checkObject(Entity entity, boolean player){
+        int index = 999;
+        for (int i=0; i<gPanel.obj.length;i++){
+            if(gPanel.obj[i] != null){
+                entity.solidArea.x = entity.worldX + entity.solidArea.x;
+                entity.solidArea.y = entity.worldY + entity.solidArea.y;
+
+                gPanel.obj[i].solidArea.x = gPanel.obj[i].worldX + gPanel.obj[i].solidArea.x;
+                gPanel.obj[i].solidArea.y = gPanel.obj[i].worldY + gPanel.obj[i].solidArea.y;
+                switch(entity.direction){
+                case "up" :
+                    entity.solidArea.y -= entity.speed;
+                    if(entity.solidArea.intersects(gPanel.obj[i].solidArea)){
+                        if(player){
+                            index = i;
+                        }
+                    }
+                    break;
+                case "down" :
+                    entity.solidArea.y += entity.speed;
+                    if(entity.solidArea.intersects(gPanel.obj[i].solidArea)){
+                        if(player){
+                            index = i;
+                        }
+                    }
+                    break;
+                case "left" :
+                    entity.solidArea.x -= entity.speed;
+                    if(entity.solidArea.intersects(gPanel.obj[i].solidArea)){
+                        if(player){
+                            index = i;
+                        }
+                    }
+                    break;
+                case "right" :
+                    entity.solidArea.x += entity.speed;
+                    if(entity.solidArea.intersects(gPanel.obj[i].solidArea)){
+                        if(player){
+                            index = i;
+                        }
+                    }
+                    break;
+                }
+                entity.solidArea.x = entity.solidAreaDefaultX;
+                entity.solidArea.y = entity.solidAreaDefaultY;
+                gPanel.obj[i].solidArea.x = gPanel.obj[i].solidAreaDefaultX;
+                gPanel.obj[i].solidArea.y = gPanel.obj[i].solidAreaDefaultY;
+            }
+        }
+        return index;
     }
     
 }
