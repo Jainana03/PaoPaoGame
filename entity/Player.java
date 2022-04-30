@@ -117,7 +117,7 @@ public class Player extends Entity{
             gp.collisionCheck.checkTile(this);
 
             // if collision is false, player can move pass this tile
-            if(!collisionUpOn){
+            if(!collisionUpOn&&!collisionDownOn&&!collisionLeftOn&&!collisionRightOn){
                 switch(direction){
                     case "up" :
                         worldY -= speed;
@@ -130,6 +130,66 @@ public class Player extends Entity{
                         break;
                     case "right" : 
                         worldX += speed;
+                        break;
+                }
+            }
+            if(collisionUpOn){
+                switch(direction){
+                    case "up" :
+                        break;
+                    case "down" :
+                        worldY += speed;
+                        break;
+                    case "left" :
+                        worldX -= speed;
+                        break;
+                    case "right" : 
+                        worldX += speed;
+                        break;
+                }
+            }
+            if(collisionDownOn){
+                switch(direction){
+                    case "up" :
+                        worldY -= speed;
+                        break;
+                    case "down" :
+                        break;
+                    case "left" :
+                        worldX -= speed;
+                        break;
+                    case "right" : 
+                        worldX += speed;
+                        break;
+                }
+            }
+            if(collisionLeftOn){
+                switch(direction){
+                    case "up" :
+                        worldY -= speed;
+                        break;
+                    case "down" :
+                        worldY += speed;
+                        break;
+                    case "left" :
+                        break;
+                    case "right" : 
+                        worldX += speed;
+                        break;
+                }
+            }
+            if(collisionRightOn){
+                switch(direction){
+                    case "up" :
+                        worldY -= speed;
+                        break;
+                    case "down" :
+                        worldY += speed;
+                        break;
+                    case "left" :
+                        worldX -= speed;
+                        break;
+                    case "right" : 
                         break;
                 }
             }
