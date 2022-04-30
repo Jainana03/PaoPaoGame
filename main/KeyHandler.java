@@ -4,10 +4,10 @@ import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener{
     public boolean upPressed, downPressed, leftPressed, rightPressed;
-    GamePanel gp;
+    GamePanel gPanel;
 
-    public KeyHandler(GamePanel gp){
-        this.gp = gp;
+    public KeyHandler(GamePanel gPanel){
+        this.gPanel = gPanel;
     }
 
     @Override
@@ -19,24 +19,24 @@ public class KeyHandler implements KeyListener{
         int code = e.getKeyCode();
 
         //Title State
-        if(gp.gameState == gp.titleState){
+        if(gPanel.gameState == gPanel.titleState){
             if(code == KeyEvent.VK_W){
-                gp.ui.commandNum--;
-                if(gp.ui.commandNum < 0){
-                    gp.ui.commandNum = 1;
+                gPanel.ui.commandNum--;
+                if(gPanel.ui.commandNum < 0){
+                    gPanel.ui.commandNum = 1;
                 }
             }
             if(code == KeyEvent.VK_S){
-                gp.ui.commandNum++;
-                if(gp.ui.commandNum > 1){
-                    gp.ui.commandNum = 0;
+                gPanel.ui.commandNum++;
+                if(gPanel.ui.commandNum > 1){
+                    gPanel.ui.commandNum = 0;
                 }
             }
             if(code == KeyEvent.VK_ENTER){
-                if(gp.ui.commandNum == 0){
-                    gp.gameState = gp.playState;
+                if(gPanel.ui.commandNum == 0){
+                    gPanel.gameState = gPanel.playState;
                 }
-                else if(gp.ui.commandNum == 1){
+                else if(gPanel.ui.commandNum == 1){
                     System.exit(0);
                 }
             }
@@ -44,7 +44,7 @@ public class KeyHandler implements KeyListener{
         }
 
         //Play State
-        if(gp.gameState == gp.playState){
+        if(gPanel.gameState == gPanel.playState){
             if(code == KeyEvent.VK_W){
                 upPressed = true;
             }
@@ -58,26 +58,26 @@ public class KeyHandler implements KeyListener{
                 rightPressed = true;
             }
             if(code == KeyEvent.VK_P){
-                gp.gameState = gp.pauseState;
+                gPanel.gameState = gPanel.pauseState;
             }
             if(code == KeyEvent.VK_ESCAPE){
-                gp.gameState = gp.optionState;
+                gPanel.gameState = gPanel.optionState;
             }
         }
         //Pause State
-        else if(gp.gameState == gp.pauseState){
+        else if(gPanel.gameState == gPanel.pauseState){
             if(code == KeyEvent.VK_P){
-                gp.gameState = gp.playState;
+                gPanel.gameState = gPanel.playState;
             }
             if(code == KeyEvent.VK_ESCAPE){
-                gp.gameState = gp.optionState;
+                gPanel.gameState = gPanel.optionState;
             }
         }
 
         //Option State
-        else if(gp.gameState == gp.optionState){
+        else if(gPanel.gameState == gPanel.optionState){
             if(code == KeyEvent.VK_ESCAPE){
-                gp.gameState = gp.playState;
+                gPanel.gameState = gPanel.playState;
             }
         }
     }

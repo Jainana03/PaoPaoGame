@@ -3,16 +3,16 @@ package main;
 import object.OBJ;
 
 public class AssetSetter {
-    GamePanel gp;
+    GamePanel gPanel;
 
-    public AssetSetter(GamePanel gp){
-        this.gp = gp;
+    public AssetSetter(GamePanel gPanel){
+        this.gPanel = gPanel;
     }
 
     public void setObject(){
-        gp.obj[0] = new OBJ();
-        gp.obj[0].worldX = 25 * gp.tileSize;
-        gp.obj[0].worldY = 25 * gp.tileSize;
+        gPanel.obj[0] = new OBJ(gPanel);
+        gPanel.obj[0].worldX = 25 * gPanel.tileSize;
+        gPanel.obj[0].worldY = 25 * gPanel.tileSize;
     }
     
 }

@@ -3,15 +3,11 @@ package object;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
+import main.GamePanel;
+
 public class OBJ extends SuperObject{
-    public OBJ(){
+    public OBJ(GamePanel gPanel){
         name = "x2HP";
 
-        try {
-            image = ImageIO.read(getClass().getResourceAsStream(""));
-            
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

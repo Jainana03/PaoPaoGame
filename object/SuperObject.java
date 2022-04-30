@@ -11,16 +11,16 @@ public class SuperObject {
     public boolean collision = false;
     public int worldX,worldY;
 
-    public void draw(Graphics2D g2,GamePanel gp){
-        int screenX = worldX - gp.player.worldX + gp.player.screenX;
-        int screenY = worldY - gp.player.worldY + gp.player.screenY;
+    public void draw(Graphics2D g2D,GamePanel gPanel){
+        int screenX = worldX - gPanel.player.worldX + gPanel.player.screenX;
+        int screenY = worldY - gPanel.player.worldY + gPanel.player.screenY;
 
         //draw map only tiles that player can see on the screen
-        if(worldX + gp.tileSize > gp.player.worldX - gp.player.screenX &&
-            worldX - gp.tileSize < gp.player.worldX + gp.player.screenX &&
-            worldY + gp.tileSize > gp.player.worldY - gp.player.screenY &&
-            worldY - gp.tileSize < gp.player.worldY + gp.player.screenY){
-                g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+        if(worldX + gPanel.tileSize > gPanel.player.worldX - gPanel.player.screenX &&
+            worldX - gPanel.tileSize < gPanel.player.worldX + gPanel.player.screenX &&
+            worldY + gPanel.tileSize > gPanel.player.worldY - gPanel.player.screenY &&
+            worldY - gPanel.tileSize < gPanel.player.worldY + gPanel.player.screenY){
+                g2D.drawImage(image, screenX, screenY, gPanel.tileSize, gPanel.tileSize, null);
             }
 
     }

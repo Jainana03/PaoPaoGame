@@ -11,18 +11,18 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Player extends Entity{
-    GamePanel gp;
+    GamePanel gPanel;
     KeyHandler keyH;
 
     public final int screenX;
     public final int screenY;
 
-    public Player(GamePanel gp,KeyHandler keyH){
-        this.gp = gp;
+    public Player(GamePanel gPanel,KeyHandler keyH){
+        this.gPanel = gPanel;
         this.keyH = keyH;
 
-        screenX = gp.ScreenWidth/2 - (gp.tileSize/2);
-        screenY = gp.ScreenHeight/2 - (gp.tileSize/2);
+        screenX = gPanel.ScreenWidth/2 - (gPanel.tileSize/2);
+        screenY = gPanel.ScreenHeight/2 - (gPanel.tileSize/2);
         
         //Player hit block is 24x21 pixels and start at (12,15)
         solidArea = new Rectangle();
@@ -36,8 +36,8 @@ public class Player extends Entity{
     }
     // start player's position, speed, direction and action
     public void setDefaultValues (){
-        worldX = gp.tileSize*10;
-        worldY = gp.tileSize*48;
+        worldX = gPanel.tileSize*10;
+        worldY = gPanel.tileSize*48;
         Power = 2;
         speed = 4;
         direction = "right";
@@ -114,7 +114,7 @@ public class Player extends Entity{
             collisionDownOn = false;
             collisionLeftOn = false;
             collisionRightOn = false;
-            gp.collisionCheck.checkTile(this);
+            gPanel.collisionCheck.checkTile(this);
 
             // if collision is false, player can move pass this tile
             if(!collisionUpOn&&!collisionDownOn&&!collisionLeftOn&&!collisionRightOn){
@@ -218,7 +218,7 @@ public class Player extends Entity{
             collisionDownOn = false;
             collisionLeftOn = false;
             collisionRightOn = false;
-            gp.collisionCheck.checkTile(this);
+            gPanel.collisionCheck.checkTile(this);
 
             spriteCounter++;
             if (spriteCounter > 30){
@@ -354,21 +354,21 @@ public class Player extends Entity{
         if(screenY > worldY){
             y = worldY;
         }
-        int rightOffset = gp.ScreenWidth - screenX;
-            if(rightOffset > gp.worldWidth - worldX){
-                x = gp.ScreenWidth - (gp.worldWidth - worldX);
+        int rightOffset = gPanel.ScreenWidth - screenX;
+            if(rightOffset > gPanel.worldWidth - worldX){
+                x = gPanel.ScreenWidth - (gPanel.worldWidth - worldX);
             }
             
-        int bottomOffset = gp.ScreenHeight - screenY;
-            if(bottomOffset > gp.worldHeight - worldY){
-                y = gp.ScreenHeight - (gp.worldHeight - worldY);
+        int bottomOffset = gPanel.ScreenHeight - screenY;
+            if(bottomOffset > gPanel.worldHeight - worldY){
+                y = gPanel.ScreenHeight - (gPanel.worldHeight - worldY);
             }
-        g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
+        g2.drawImage(image, x, y, gPanel.tileSize, gPanel.tileSize, null);
         //check hitblock
         //g2.drawRect(x+12, y+15, 24, 21);
     }
     public void endGame(){
-        gp.ui.gameFinished = true;
+        gPanel.ui.gameFinished = true;
         //gp.stopMusic();
 
     }
