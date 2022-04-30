@@ -364,7 +364,8 @@ public class Player extends Entity{
                 y = gp.ScreenHeight - (gp.worldHeight - worldY);
             }
         g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
-        g2.drawRect(x+12, y+15, 24, 21);
+        //check hitblock
+        //g2.drawRect(x+12, y+15, 24, 21);
     }
     public void endGame(){
         gp.ui.gameFinished = true;
