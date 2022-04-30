@@ -369,7 +369,7 @@ public class Player extends Entity{
             }
         g2.drawImage(image, x, y, gPanel.tileSize, gPanel.tileSize, null);
         //check hitblock
-        g2.drawRect(x+12, y+15, 24, 21);
+        //g2.drawRect(x+12, y+15, 24, 21);
     }
     public void endGame(){
         gPanel.ui.gameFinished = true;
