@@ -11,8 +11,8 @@ public class AssetSetter {
 
     public void setObject(){
         gPanel.obj[0] = new OBJ(gPanel);
-        gPanel.obj[0].worldX = 25 * gPanel.tileSize;
-        gPanel.obj[0].worldY = 25 * gPanel.tileSize;
+        gPanel.obj[0].worldX = 14 * gPanel.tileSize;
+        gPanel.obj[0].worldY = 39 * gPanel.tileSize;
     }
     
 }

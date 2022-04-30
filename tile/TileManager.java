@@ -18,8 +18,8 @@ public class TileManager {
     public Tile[] tile;
     public int mapTileNum[][];
     Random random = new Random();
-    int[] mapNum = {1,2,3,4,5,6,7,8,9,10};
-    int randomMapsNum = random.nextInt(10);
+    public int[] mapNum = {1,2,3,4,5,6,7,8,9,10};
+    public int randomMapsNum = random.nextInt(10);
     int lastMapsNum = 11;
 
 

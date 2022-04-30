@@ -38,7 +38,7 @@ public class GamePanel extends JPanel implements Runnable {
     long lastTimeDraw = 0;
 
     // SYSTEM
-    TileManager tileM = new TileManager(this);
+    public TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler(this);
     public CollisionChecker collisionCheck = new CollisionChecker(this);
     public AssetSetter aSetter = new AssetSetter(this);
@@ -65,7 +65,7 @@ public class GamePanel extends JPanel implements Runnable {
         this.setFocusable(true);
     }
     public void setupGame(){
-        //aSetter.setObject();
+         aSetter.setObject();
         //playMusic(0);
         gameState = titleState;
     }
@@ -147,13 +147,12 @@ public class GamePanel extends JPanel implements Runnable {
             tileM.draw(g2D);
 
             //OBJECT(No object now)
-            /*
+            
             for(int i=0;i<obj.length;i++){
                 if(obj[i]!=null){
-                    obj[i].draw(g2, this);
+                    obj[i].draw(g2D , this);
                 }
             }
-            */
 
             //draw player
             player.draw(g2D);
