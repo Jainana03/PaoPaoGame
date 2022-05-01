@@ -67,6 +67,27 @@ public class GamePanel extends JPanel implements Runnable {
         if(tileM.mapNum[tileM.randomMapsNum] == 1){
             aSetter.setObject1();
         }
+        if(tileM.mapNum[tileM.randomMapsNum] == 2){
+            //aSetter.setObject2();
+        }
+        if(tileM.mapNum[tileM.randomMapsNum] == 3){
+            //aSetter.setObject3();
+        }
+        if(tileM.mapNum[tileM.randomMapsNum] == 4){
+            //aSetter.setObject4();
+        }
+        if(tileM.mapNum[tileM.randomMapsNum] == 5){
+            //aSetter.setObject5();
+        }
+        if(tileM.mapNum[tileM.randomMapsNum] == 6){
+            //aSetter.setObject6();
+        }
+        if(tileM.mapNum[tileM.randomMapsNum] == 7){
+            //aSetter.setObject7();
+        }
+        if(tileM.mapNum[tileM.randomMapsNum] == 8){
+            //aSetter.setObject8();
+        }
         
         //playMusic(0);
         gameState = titleState;
