@@ -18,6 +18,7 @@ public class EventHandler {
     public void checkEvent(){
         for(int i=0;i<=19;i++){
             if(hit(i, 0, "up")||hit(i, 0, "down")||hit(i, 0, "left")||hit(i, 0, "right")){
+                System.out.println("display loading screen");
                 teleport(gPanel.gameState);
             }
         }
@@ -44,7 +45,7 @@ public class EventHandler {
         return hit;
     }
     public void teleport(int gameState){
-        gPanel.gameState = gPanel.titleState;
+        gPanel.gameState = gPanel.loadingState;
 
     }
 }

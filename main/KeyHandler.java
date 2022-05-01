@@ -83,7 +83,7 @@ public class KeyHandler implements KeyListener{
 
         //Loading State
         else if(gPanel.gameState == gPanel.loadingState){
-            if(code == KeyEvent.VK_ENTER){
+            if(code == KeyEvent.VK_SPACE){
                 gPanel.gameState = gPanel.playState;
             }
         }

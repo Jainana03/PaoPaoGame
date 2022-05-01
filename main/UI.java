@@ -31,7 +31,7 @@ public class UI {
     DecimalFormat dFormat = new DecimalFormat("#0.00");
     DecimalFormat dFormat2 = new DecimalFormat("#00");
 
-    public int statelevel = 1;
+    public int stagelevel = 1;
 
     public UI(GamePanel gPanel){
         this.gPanel = gPanel;
@@ -90,7 +90,7 @@ public class UI {
                 g2D.setColor(Color.white);
                 g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,20F));
                 g2D.drawString("Power : "+gPanel.player.Power,25,gPanel.tileSize*1);
-                g2D.drawString("State : "+statelevel,650,gPanel.tileSize*1);
+                g2D.drawString("Stage : "+stagelevel,650,gPanel.tileSize*1);
                 playTime += (double)1/60;
 
                 g2D.setColor(Color.white);
@@ -131,9 +131,10 @@ public class UI {
         showMessageCenter(g2D, text);
     }
     public void drawLoadingScreen(){
-        g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,80F));
-        g2D.setColor(Color.black);
-        String text = "Enter to CONTINUE";
+        double score = (gPanel.player.Power*5)-(60*min-playTime)*5;
+        String text = "Your score : "+dFormat.format(score);
+        g2D.setColor(Color.white);
+        g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,50F));
         showMessageCenter(g2D, text);
     }
     public void drawTitleScreen(){

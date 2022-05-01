@@ -141,6 +141,10 @@ public class GamePanel extends JPanel implements Runnable {
             if(System.currentTimeMillis() - lastTimeDraw >= 1000){
                 if(gameState == titleState){
                     drawCount = 0;
+                }else if(gameState == loadingState){
+                    System.out.println("FPS : "+drawCount);
+                    System.out.println("gamestate : "+gameState);
+                    drawCount = 0;
                 }else{
                     System.out.println("FPS : "+drawCount);
                     drawCount = 0;
@@ -167,7 +171,7 @@ public class GamePanel extends JPanel implements Runnable {
 
         }else if(gameState == loadingState){
             ui.draw(g2D);
-            tileM.randomMapsNum = random.nextInt(10);
+            
         }else if(gameState == playState){
             //draw tiles
             tileM.draw(g2D);
