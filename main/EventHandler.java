@@ -1,7 +1,9 @@
 package main;
 import java.awt.Rectangle;
+import java.util.Random;
 
 public class EventHandler {
+    Random random = new Random();
     GamePanel gPanel;
     Rectangle eventRect;
     int eventRectDefaultX, eventRectDefaultY;
@@ -45,6 +47,8 @@ public class EventHandler {
         return hit;
     }
     public void teleport(int gameState){
+        gPanel.player.setDefaultValues();
+        gPanel.tileM.randomMapsNum = random.nextInt(10);
         gPanel.gameState = gPanel.loadingState;
 
     }

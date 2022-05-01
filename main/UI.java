@@ -23,6 +23,7 @@ public class UI {
     int messageCounter = 0;
     public boolean gameFinished = false;
     public int commandNum = 0;
+    public double score = 0;
 
     public double playTime;
     BufferedImage image,BGImage,StartButton,StartButton_C,EXITButton,EXITButton_C;
@@ -70,6 +71,7 @@ public class UI {
         }
         if(gPanel.gameState == gPanel.playState){
             //playstate
+            score = 0;
             g2D.setColor(Color.white);
             g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,20F));
             g2D.drawString("Power : "+gPanel.player.Power,25,gPanel.tileSize*1);
@@ -93,7 +95,7 @@ public class UI {
             drawPauseScreen();
         }
         if(gPanel.gameState == gPanel.loadingState){
-            double score = (gPanel.player.Power*5)-(60*min-playTime)*5;
+            score = (gPanel.player.Power*5)-(60*min-playTime)*5;
             String text = "Your score : "+dFormat.format(score);
             showMessage(text);
             if(messageOn){
