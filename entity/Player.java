@@ -92,7 +92,7 @@ public class Player extends Entity{
         }
     }
     public void update(){
-        if(!collisionUpOn){
+        if(!collisionUpOn&&gPanel.ui.stagelevel!=4){
             worldY -= 3;
         }
         //spriteNum use to change player animation and spriteCounter use to count for change animation on time.

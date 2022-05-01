@@ -92,7 +92,12 @@ public class GamePanel extends JPanel implements Runnable {
         if(tileM.mapNum[tileM.randomMapsNum] == 8){
             //aSetter.setObject8();
         }
-        
+        if(tileM.mapNum[tileM.randomMapsNum] == 9){
+            //aSetter.setObject9();
+        }
+        if(tileM.mapNum[tileM.randomMapsNum] == 10){
+            //aSetter.setObject10();
+        }
         //playMusic(0);
         gameState = titleState;
     }
@@ -142,7 +147,6 @@ public class GamePanel extends JPanel implements Runnable {
                 if(gameState == titleState){
                     drawCount = 0;
                 }else if(gameState == loadingState){
-                    System.out.println("FPS : "+drawCount);
                     System.out.println("gamestate : "+gameState);
                     drawCount = 0;
                 }else{
@@ -173,6 +177,13 @@ public class GamePanel extends JPanel implements Runnable {
             ui.draw(g2D);
             
         }else if(gameState == playState){
+            if(ui.stagelevel == 4){
+                tileM.loadMap("/res/maps/world-1.txt");
+            }
+            else if(ui.stagelevel > tileM.lastStageLevel){
+                tileM.loadMap(tileM.randomMap());
+                tileM.lastStageLevel = ui.stagelevel;
+            }
             //draw tiles
             tileM.draw(g2D);
 

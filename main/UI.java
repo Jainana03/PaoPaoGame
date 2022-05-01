@@ -105,8 +105,6 @@ public class UI {
                 if(messageCounter > 120){
                     messageOn = false;
                     messageCounter = 0;
-                    stagelevel += 1;
-                    score = 0;
                 }
             }
         }

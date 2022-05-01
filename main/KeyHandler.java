@@ -85,6 +85,17 @@ public class KeyHandler implements KeyListener{
         else if(gPanel.gameState == gPanel.loadingState){
             if(code == KeyEvent.VK_SPACE){
                 gPanel.gameState = gPanel.playState;
+                gPanel.ui.stagelevel += 1;
+                gPanel.ui.score = 0;
+                gPanel.ui.playTime = 0;
+                gPanel.ui.min = 0;
+            }
+            if(code == KeyEvent.VK_ESCAPE){
+                gPanel.gameState = gPanel.titleState;
+                gPanel.ui.stagelevel += 1;
+                gPanel.ui.score = 0;
+                gPanel.ui.playTime = 0;
+                gPanel.ui.min = 0;
             }
         }
     }
