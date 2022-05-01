@@ -75,7 +75,7 @@ public class UI {
             drawPauseScreen();
         }
         if(gPanel.gameState == gPanel.loadingState){
-            showMessageCenter(g2D, "State "+statelevel+" Enter to CONTINUE");
+            drawLoadingScreen();
         }
 
         if(gameFinished){
@@ -128,6 +128,12 @@ public class UI {
         g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,80F));
         g2D.setColor(Color.black);
         String text = "PAUSED";
+        showMessageCenter(g2D, text);
+    }
+    public void drawLoadingScreen(){
+        g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,80F));
+        g2D.setColor(Color.black);
+        String text = "Enter to CONTINUE";
         showMessageCenter(g2D, text);
     }
     public void drawTitleScreen(){

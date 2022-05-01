@@ -44,7 +44,7 @@ public class EventHandler {
         return hit;
     }
     public void teleport(int gameState){
-        gPanel.gameState = gPanel.loadingState;
+        gPanel.gameState = gPanel.titleState;
 
     }
 }

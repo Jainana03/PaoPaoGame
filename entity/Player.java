@@ -119,8 +119,12 @@ public class Player extends Entity{
             collisionRightOn = false;
             gPanel.collisionCheck.checkTile(this);
 
+            //check object
             int objIndex = gPanel.collisionCheck.checkObject(this, true);
             PassOBJ(objIndex);
+
+            //check event
+            gPanel.eventH.checkEvent();
 
             // if collision is false, player can move pass this tile
             if(!collisionUpOn&&!collisionDownOn&&!collisionLeftOn&&!collisionRightOn){

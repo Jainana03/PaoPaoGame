@@ -10,6 +10,7 @@ import java.awt.Dimension;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.util.Random;
 
 public class GamePanel extends JPanel implements Runnable {
 
@@ -43,6 +44,7 @@ public class GamePanel extends JPanel implements Runnable {
     public AssetSetter aSetter = new AssetSetter(this);
     public UI ui = new UI(this);
     public EventHandler eventH = new EventHandler(this);
+    Random random = new Random();
     Thread gameThread;
 
     //ENTITY AND OBJECT
@@ -164,8 +166,8 @@ public class GamePanel extends JPanel implements Runnable {
             ui.draw(g2D);
 
         }else if(gameState == loadingState){
-            ui.statelevel += 1;
             ui.draw(g2D);
+            tileM.randomMapsNum = random.nextInt(10);
         }else if(gameState == playState){
             //draw tiles
             tileM.draw(g2D);
