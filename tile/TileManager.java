@@ -115,6 +115,42 @@ public class TileManager {
             //water-sand right
             tile[15] = new Tile();
             tile[15].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sandright.png"));
+            
+            //water-grass up left
+            tile[16] = new Tile();
+            tile[16].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassupleft.png"));
+            tile[16].collision = true;
+
+            //water-grass up right
+            tile[17] = new Tile();
+            tile[17].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassupright.png"));
+            tile[17].collision = true;
+
+            //water-grass down left
+            tile[18] = new Tile();
+            tile[18].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassdownleft.png"));
+            tile[18].collision = true;
+
+            //water-grass down right
+            tile[19] = new Tile();
+            tile[19].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassdownright.png"));
+            tile[19].collision = true;
+
+            //water-sand up left
+            tile[20] = new Tile();
+            tile[20].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sandupleft.png"));
+
+            //water-sand up right
+            tile[21] = new Tile();
+            tile[21].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sandupright.png"));
+
+            //water-sand down left
+            tile[22] = new Tile();
+            tile[22].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sanddownleft.png"));
+
+            //water-sand down right
+            tile[23] = new Tile();
+            tile[23].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sanddownright.png"));
 
         } catch (IOException e) {
             e.printStackTrace();
