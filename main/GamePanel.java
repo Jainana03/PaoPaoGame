@@ -65,7 +65,7 @@ public class GamePanel extends JPanel implements Runnable {
         this.setFocusable(true);
     }
     public void setupGame(){
-         aSetter.setObject();
+        aSetter.setObject();
         //playMusic(0);
         gameState = titleState;
     }

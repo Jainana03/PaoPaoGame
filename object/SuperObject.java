@@ -47,8 +47,8 @@ public class SuperObject {
                 gPanel.player.screenY > gPanel.player.worldY ||
                 rightOffset > gPanel.worldWidth - gPanel.player.worldX ||
                 bottomOffset > gPanel.worldHeight - gPanel.player.worldY){
-                g2D.drawImage(image, screenX, screenY, gPanel.tileSize, gPanel.tileSize, null);
-        }
+                    g2D.drawImage(image, screenX, screenY, gPanel.tileSize, gPanel.tileSize, null);
+                }
 
     }
 }
