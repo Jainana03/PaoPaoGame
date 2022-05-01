@@ -31,16 +31,20 @@ public class TileManager {
         mapTileNum = new int [gp.maxWorldCol][gp.maxWorldRow];
 
         getTileImage();
+        loadMap(randomMap());
         
+    }
+    public String randomMap(){
+        randomMapsNum = random.nextInt(10);
         if(mapNum[randomMapsNum] != lastMapsNum){
             lastMapsNum = mapNum[randomMapsNum];
             //randomMapsNum = 0;
             System.out.println("map random number : "+randomMapsNum);
             System.out.println("This is map-"+mapNum[randomMapsNum]);
             String filepath = "/res/maps/map-"+mapNum[randomMapsNum]+".txt";
-            loadMap(filepath);
+            return filepath;
         }else{
-            randomMapsNum = random.nextInt(10);
+            return randomMap();
         }
     }
     public void getTileImage(){
