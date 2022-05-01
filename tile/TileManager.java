@@ -27,7 +27,7 @@ public class TileManager {
 
         this.gPanel = gp;
 
-        tile = new Tile[20];
+        tile = new Tile[40];
         mapTileNum = new int [gp.maxWorldCol][gp.maxWorldRow];
 
         getTileImage();
@@ -117,7 +117,7 @@ public class TileManager {
             tile[15].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sandright.png"));
             
             //water-grass up left
-             /* //water-grass up left
+            //water-grass up left
             tile[16] = new Tile();
             tile[16].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassupleft.png"));
             tile[16].collision = true;
@@ -154,7 +154,7 @@ public class TileManager {
 
             //water-grass down right corner
             tile[23] = new Tile();
-            tile[23].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassdwonrightcorner.png"));
+            tile[23].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassdownrightcorner.png"));
             tile[23].collision = true;
 
             //water-sand up left
@@ -187,7 +187,7 @@ public class TileManager {
 
             //water-sand down right corner
             tile[31] = new Tile();
-            tile[31].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sanddownrightcorner.png"));*/
+            tile[31].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sanddownrightcorner.png"));
 
         } catch (IOException e) {
             e.printStackTrace();
