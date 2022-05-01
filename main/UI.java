@@ -70,59 +70,45 @@ public class UI {
         }
         if(gPanel.gameState == gPanel.playState){
             //playstate
+            g2D.setColor(Color.white);
+            g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,20F));
+            g2D.drawString("Power : "+gPanel.player.Power,25,gPanel.tileSize*1);
+            g2D.drawString("Stage : "+stagelevel,650,gPanel.tileSize*1);
+            playTime += (double)1/60;
+
+            g2D.setColor(Color.white);
+            g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,15F));
+            //TIME 
+            if (playTime > 60){
+                min += 1;
+                playTime -= 60;
+            }
+            if (min == 0){
+                g2D.drawString("Time : "+dFormat.format(playTime)+" sec", gPanel.tileSize*13, gPanel.tileSize*10);
+            }else{
+                g2D.drawString("Time : "+min+"."+dFormat2.format(playTime)+" min", gPanel.tileSize*13, gPanel.tileSize*10);
+            }    
         }
         if(gPanel.gameState == gPanel.pauseState){
             drawPauseScreen();
         }
         if(gPanel.gameState == gPanel.loadingState){
-            drawLoadingScreen();
-        }
-
-        if(gameFinished){
-            showMessageCenter(g2D, "Congratulations!");
-            showMessageCenter(g2D, "The end!");
-            showMessageCenter(g2D, "Your play time is "+min+"."+dFormat2.format(playTime)+" min");
-
-            gPanel.gameThread = null;
-
-        }else{
-            if(gPanel.gameState == gPanel.playState){
-                g2D.setColor(Color.white);
-                g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,20F));
-                g2D.drawString("Power : "+gPanel.player.Power,25,gPanel.tileSize*1);
-                g2D.drawString("Stage : "+stagelevel,650,gPanel.tileSize*1);
-                playTime += (double)1/60;
-
-                g2D.setColor(Color.white);
-                g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,15F));
-                //TIME 
-                if (playTime > 60){
-                    min += 1;
-                    playTime -= 60;
-                }
-                if (min == 0){
-                    g2D.drawString("Time : "+dFormat.format(playTime)+" sec", gPanel.tileSize*13, gPanel.tileSize*10);
-                }else{
-                    g2D.drawString("Time : "+min+"."+dFormat2.format(playTime)+" min", gPanel.tileSize*13, gPanel.tileSize*10);
-            }
-            
-            }
-            
-
-
+            double score = (gPanel.player.Power*5)-(60*min-playTime)*5;
+            String text = "Your score : "+dFormat.format(score);
+            showMessage(text);
             if(messageOn){
-                g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,20F));
-                g2D.drawString(message, gPanel.tileSize/2, gPanel.tileSize*5);
+                g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,50F));
+                g2D.drawString(message,getXforCenteredText(text),gPanel.ScreenHeight/2);
                 messageCounter++;
                 if(messageCounter > 120){
                     messageOn = false;
                     messageCounter = 0;
+                    gPanel.gameState = gPanel.titleState;
+                    stagelevel += 1;
+                    score = 0;
                 }
             }
-
         }
-        
-
     }
     public void drawPauseScreen(){
         g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,80F));
@@ -133,9 +119,18 @@ public class UI {
     public void drawLoadingScreen(){
         double score = (gPanel.player.Power*5)-(60*min-playTime)*5;
         String text = "Your score : "+dFormat.format(score);
-        g2D.setColor(Color.white);
-        g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,50F));
-        showMessageCenter(g2D, text);
+        showMessage(text);
+        if(messageOn){
+            g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,50F));
+            g2D.drawString(message,getXforCenteredText(text),gPanel.ScreenHeight/2);
+            messageCounter++;
+            if(messageCounter > 120){
+                messageOn = false;
+                messageCounter = 0;
+                gPanel.gameState = gPanel.titleState;
+            }
+        }
+
     }
     public void drawTitleScreen(){
         //Background
