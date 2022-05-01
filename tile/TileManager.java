@@ -32,16 +32,17 @@ public class TileManager {
 
         getTileImage();
         loadMap("/res/maps/map-1.txt");
-        /*
+        
         if(mapNum[randomMapsNum] != lastMapsNum){
             lastMapsNum = mapNum[randomMapsNum];
+            randomMapsNum = 0;
             System.out.println("map random number : "+randomMapsNum);
             System.out.println("This is map-"+mapNum[randomMapsNum]);
             String filepath = "/res/maps/map-"+mapNum[randomMapsNum]+".txt";
             loadMap(filepath);
         }else{
             randomMapsNum = random.nextInt(10);
-        }*/
+        }
     }
     public void getTileImage(){
         try {

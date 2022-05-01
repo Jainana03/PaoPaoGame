@@ -228,6 +228,7 @@ public class Player extends Entity{
                         Power = Power*3;
                     }
                     gPanel.obj[index] = null;
+                    gPanel.obj[index+1] = null;
                     break;
                 case "DecreasePower" :
                     System.out.println("This is "+gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum]);
@@ -274,6 +275,7 @@ public class Player extends Entity{
                         }
                     }
                     gPanel.obj[index] = null;
+                    gPanel.obj[index-1] = null;
                     break;
             }
             

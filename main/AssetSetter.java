@@ -5,10 +5,6 @@ import object.OBJ_In;
 
 import java.util.Random;
 
-import java.awt.Graphics2D;
-import java.awt.Color;
-import java.awt.Font;
-
 public class AssetSetter {
     GamePanel gPanel;
     Random random = new Random();
@@ -22,7 +18,7 @@ public class AssetSetter {
         this.gPanel = gPanel;
     }
 
-    public void setObject(){
+    public void setObject1(){
         //obj_in = increase power door
         gPanel.obj[0] = new OBJ_In(gPanel,InPowerElement[randomInNum]);
         gPanel.obj[0].worldX = 14 * gPanel.tileSize;

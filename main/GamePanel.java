@@ -12,7 +12,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 public class GamePanel extends JPanel implements Runnable {
-    int weird = 0;
 
     //screen settings
     //1 tile in originaltilesize(16x16 pixels) is too small in computer screen. then, increase all tile scale to 3
@@ -65,7 +64,10 @@ public class GamePanel extends JPanel implements Runnable {
         this.setFocusable(true);
     }
     public void setupGame(){
-        aSetter.setObject();
+        if(tileM.mapNum[tileM.randomMapsNum] == 1){
+            aSetter.setObject1();
+        }
+        
         //playMusic(0);
         gameState = titleState;
     }
