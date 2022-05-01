@@ -35,6 +35,15 @@ public class OBJ_In extends SuperObject{
                 System.out.println("ERROR : Lost object file");
             }   
         }
+        if(element.equals("+4")){
+            try {
+                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/wood-yellow.png"));
+                
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("ERROR : Lost object file");
+            }   
+        }
         if(element.equals("+5")){
             try {
                 image = ImageIO.read(getClass().getResourceAsStream("/res/objects/wood-yellow.png"));

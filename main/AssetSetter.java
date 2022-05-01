@@ -8,8 +8,8 @@ import java.util.Random;
 public class AssetSetter {
     GamePanel gPanel;
     Random random = new Random();
-    public String[] InPowerElement = {"+1","+2","+3","+5","x2","x3"};
-    public String[] DePowerElement = {"-1","-2","-3","-5","/2","/3"};
+    public String[] InPowerElement = {"+1","+2","+3","+4","+5","x2","x3"};
+    public String[] DePowerElement = {"-1","-2","-3","-4","-5","/2","/3"};
     public int randomInNum = random.nextInt(6);
     public int randomDeNum = random.nextInt(6);
     int lastRandomNum = 7;

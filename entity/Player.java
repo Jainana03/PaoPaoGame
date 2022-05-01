@@ -186,8 +186,12 @@ public class Player extends Entity{
             collisionRightOn = false;
             gPanel.collisionCheck.checkTile(this);
 
+            //check object
             int objIndex = gPanel.collisionCheck.checkObject(this, true);
             PassOBJ(objIndex);
+
+            //check event
+            gPanel.eventH.checkEvent();
 
             spriteCounter++;
             if (spriteCounter > 30){
@@ -217,6 +221,9 @@ public class Player extends Entity{
                     }
                     if(gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum] == "+3"){
                         Power += 3;
+                    }
+                    if(gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum] == "+4"){
+                        Power += 4;
                     }
                     if(gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum] == "+5"){
                         Power += 5;
@@ -249,6 +256,13 @@ public class Player extends Entity{
                     if(gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum] == "-3"){
                         if(Power >= 3){
                             Power -= 3;
+                        }else{
+                            Power = 0;
+                        }
+                    }
+                    if(gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum] == "-4"){
+                        if(Power >= 4){
+                            Power -= 4;
                         }else{
                             Power = 0;
                         }

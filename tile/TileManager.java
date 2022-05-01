@@ -117,6 +117,7 @@ public class TileManager {
             tile[15].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sandright.png"));
             
             //water-grass up left
+            /*
             tile[16] = new Tile();
             tile[16].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-grassupleft.png"));
             tile[16].collision = true;
@@ -150,7 +151,7 @@ public class TileManager {
 
             //water-sand down right
             tile[23] = new Tile();
-            tile[23].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sanddownright.png"));
+            tile[23].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/water-sanddownright.png"));*/
 
         } catch (IOException e) {
             e.printStackTrace();

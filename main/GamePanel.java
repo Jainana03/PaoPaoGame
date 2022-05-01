@@ -42,6 +42,7 @@ public class GamePanel extends JPanel implements Runnable {
     public CollisionChecker collisionCheck = new CollisionChecker(this);
     public AssetSetter aSetter = new AssetSetter(this);
     public UI ui = new UI(this);
+    public EventHandler eventH = new EventHandler(this);
     Thread gameThread;
 
     //ENTITY AND OBJECT
@@ -54,6 +55,7 @@ public class GamePanel extends JPanel implements Runnable {
     public final int playState = 1;
     public final int pauseState = 2;
     public final int optionState = 3;
+    public final int loadingState = 4;
     
     
     public GamePanel(){
@@ -161,7 +163,10 @@ public class GamePanel extends JPanel implements Runnable {
         if(gameState == titleState){
             ui.draw(g2D);
 
-        }else{
+        }else if(gameState == loadingState){
+            ui.statelevel += 1;
+            ui.draw(g2D);
+        }else if(gameState == playState){
             //draw tiles
             tileM.draw(g2D);
 
