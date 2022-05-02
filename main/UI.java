@@ -97,7 +97,10 @@ public class UI {
         if(gPanel.gameState == gPanel.loadingState){
             score = (gPanel.player.Power*5)-(60*min-playTime)*5;
             String text = "Your score : "+dFormat.format(score);
+            String text1 = "Space to continue or ESC to escape.";
             showMessage(text);
+            g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,30F));
+            g2D.drawString("Space to continue or ESC to escape.",getXforCenteredText(text1),gPanel.tileSize*11);
             if(messageOn){
                 g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,50F));
                 g2D.drawString(message,getXforCenteredText(text),gPanel.ScreenHeight/2);
