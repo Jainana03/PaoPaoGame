@@ -177,7 +177,10 @@ public class GamePanel extends JPanel implements Runnable {
             ui.draw(g2D);
             
         }else if(gameState == playState){
-            if(ui.stagelevel > tileM.lastStageLevel){
+            if(ui.stagelevel == 4){
+                tileM.loadMap("/res/maps/world-1.txt");
+            }
+            else if(ui.stagelevel > tileM.lastStageLevel){
                 tileM.loadMap(tileM.randomMap());
                 tileM.lastStageLevel = ui.stagelevel;
             }
