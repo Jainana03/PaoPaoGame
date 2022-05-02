@@ -9,6 +9,7 @@ public class Entity {
     public int worldX,worldY;
 
     //player default status:
+    public int upspeed;
     public int speed;
     public int Power;
 
