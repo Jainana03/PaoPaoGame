@@ -37,6 +37,7 @@ public class GamePanel extends JPanel implements Runnable {
     int FPS = 60;
     long lastTimeDraw = 0;
 
+    String filepath;
     // SYSTEM
     public TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler(this);
@@ -67,37 +68,40 @@ public class GamePanel extends JPanel implements Runnable {
         this.addKeyListener(keyH);
         this.setFocusable(true);
     }
-    public void setupGame(){
+    public void setGameObj(){
         if(tileM.mapNum[tileM.randomMapsNum] == 1){
             aSetter.setObject1();
         }
         if(tileM.mapNum[tileM.randomMapsNum] == 2){
-            //aSetter.setObject2();
+            aSetter.setObject2();
         }
         if(tileM.mapNum[tileM.randomMapsNum] == 3){
-            //aSetter.setObject3();
+            aSetter.setObject3();
         }
         if(tileM.mapNum[tileM.randomMapsNum] == 4){
-            //aSetter.setObject4();
+            aSetter.setObject4();
         }
         if(tileM.mapNum[tileM.randomMapsNum] == 5){
-            //aSetter.setObject5();
+            aSetter.setObject5();
         }
         if(tileM.mapNum[tileM.randomMapsNum] == 6){
-            //aSetter.setObject6();
+            aSetter.setObject6();
         }
         if(tileM.mapNum[tileM.randomMapsNum] == 7){
-            //aSetter.setObject7();
+            aSetter.setObject7();
         }
         if(tileM.mapNum[tileM.randomMapsNum] == 8){
-            //aSetter.setObject8();
+            aSetter.setObject8();
         }
         if(tileM.mapNum[tileM.randomMapsNum] == 9){
-            //aSetter.setObject9();
+            aSetter.setObject9();
         }
         if(tileM.mapNum[tileM.randomMapsNum] == 10){
-            //aSetter.setObject10();
+            aSetter.setObject10();
         }
+    }
+    public void setupGame(){
+        //setGameObj();
         //playMusic(0);
         gameState = titleState;
     }
@@ -150,7 +154,7 @@ public class GamePanel extends JPanel implements Runnable {
                     System.out.println("gamestate : "+gameState);
                     drawCount = 0;
                 }else{
-                    System.out.println("FPS : "+drawCount);
+                    //System.out.println("FPS : "+drawCount);
                     drawCount = 0;
                 }
                 lastTimeDraw = System.currentTimeMillis();
@@ -178,7 +182,11 @@ public class GamePanel extends JPanel implements Runnable {
             
         }else if(gameState == playState){
             if(ui.stagelevel > tileM.lastStageLevel){
-                tileM.loadMap(tileM.randomMap());
+                filepath = tileM.randomMap();
+                tileM.loadMap(filepath);
+                //String num = filepath.substring(filepath.indexOf("-")+1,filepath.lastIndexOf("."));
+                //int Num = Integer.parseInt(num);
+                setGameObj();
                 tileM.lastStageLevel = ui.stagelevel;
             }
             //draw tiles

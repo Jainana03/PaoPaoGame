@@ -19,6 +19,7 @@ public class AssetSetter {
     }
 
     public void setObject1(){
+        System.out.println("set object for map1");
         //obj_in = increase power door
         gPanel.obj[0] = new OBJ_In(gPanel,InPowerElement[randomInNum]);
         gPanel.obj[0].worldX = 14 * gPanel.tileSize;
@@ -67,6 +68,17 @@ public class AssetSetter {
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
     }
+    public void setObject2(){System.out.println("set object for map2");
+}
+    public void setObject3(){System.out.println("set object for map3");}
+    public void setObject4(){System.out.println("set object for map4");}
+    public void setObject5(){System.out.println("set object for map5");}
+    public void setObject6(){System.out.println("set object for map6");}
+    public void setObject7(){System.out.println("set object for map7");}
+    public void setObject8(){System.out.println("set object for map8");}
+    public void setObject9(){System.out.println("set object for map9");}
+    public void setObject10(){System.out.println("set object for map10");}
+
         
     
 }
