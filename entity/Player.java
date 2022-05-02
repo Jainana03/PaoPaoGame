@@ -217,76 +217,76 @@ public class Player extends Entity{
         if(index != 999){
             switch(gPanel.obj[index].name){
                 case "IncreasePower" :
-                    System.out.println("This is "+gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum]);
-                    if(gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum] == "+1"){
+                    System.out.println("This is "+gPanel.obj[index].element);
+                    if(gPanel.obj[index].element.equals("+1")){
                         Power += 1;
                     }
-                    if(gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum] == "+2"){
+                    if(gPanel.obj[index].element.equals("+2")){
                         Power += 2;
                     }
-                    if(gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum] == "+3"){
+                    if(gPanel.obj[index].element.equals("+3")){
                         Power += 3;
                     }
-                    if(gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum] == "+4"){
+                    if(gPanel.obj[index].element.equals("+4")){
                         Power += 4;
                     }
-                    if(gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum] == "+5"){
+                    if(gPanel.obj[index].element.equals("+5")){
                         Power += 5;
                     }
-                    if(gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum] == "x2"){
+                    if(gPanel.obj[index].element.equals("x2")){
                         Power = Power*2;
                     }
-                    if(gPanel.aSetter.InPowerElement[gPanel.aSetter.randomInNum] == "x3"){
+                    if(gPanel.obj[index].element.equals("x3")){
                         Power = Power*3;
                     }
                     gPanel.obj[index] = null;
                     gPanel.obj[index+1] = null;
                     break;
                 case "DecreasePower" :
-                    System.out.println("This is "+gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum]);
-                    if(gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum] == "-1"){
+                    System.out.println("This is "+gPanel.obj[index].element);
+                    if(gPanel.obj[index].element.equals("-1")){
                         if(Power >= 1){
                             Power -= 1;
                         }else{
                             Power = 0;
                         }
                     }
-                    if(gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum] == "-2"){
+                    if(gPanel.obj[index].element.equals("-2")){
                         if(Power >= 2){
                             Power -= 2;
                         }else{
                             Power = 0;
                         }
                     }
-                    if(gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum] == "-3"){
+                    if(gPanel.obj[index].element.equals("-3")){
                         if(Power >= 3){
                             Power -= 3;
                         }else{
                             Power = 0;
                         }
                     }
-                    if(gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum] == "-4"){
+                    if(gPanel.obj[index].element.equals("-4")){
                         if(Power >= 4){
                             Power -= 4;
                         }else{
                             Power = 0;
                         }
                     }
-                    if(gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum] == "-5"){
+                    if(gPanel.obj[index].element.equals("-5")){
                         if(Power >= 5){
                             Power -= 5;
                         }else{
                             Power = 0;
                         }
                     }
-                    if(gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum] == "/2"){
+                    if(gPanel.obj[index].element.equals("/2")){
                         if(Power >= 2){
                             Power = Power/2;
                         }else{
                             Power = 0;
                         }
                     }
-                    if(gPanel.aSetter.DePowerElement[gPanel.aSetter.randomDeNum] == "/3"){
+                    if(gPanel.obj[index].element.equals("/3")){
                         if(Power >= 3){
                             Power = Power/3;
                         }else{
