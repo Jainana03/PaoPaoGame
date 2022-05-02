@@ -24,7 +24,7 @@ public class CollisionChecker {
 
         switch(entity.direction){
         case "up" :
-            entityTopRow = (entityTopWorldY - entity.speed)/gPanel.tileSize;
+            entityTopRow = (entityTopWorldY - entity.speed - 3)/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityLeftCol][entityTopRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityRightCol][entityTopRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){
@@ -32,13 +32,14 @@ public class CollisionChecker {
             }
             break;
         case "down" :
-            entityTopRow = (entityTopWorldY - entity.speed)/gPanel.tileSize;
+            entityTopRow = (entityTopWorldY - entity.speed - 3)/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityLeftCol][entityTopRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityRightCol][entityTopRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){
                 entity.collisionUpOn = true;
             }
             entityBottomRow = (entityBottomWorldY + entity.speed)/gPanel.tileSize;
+            entityTopRow = entityTopWorldY/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityLeftCol][entityBottomRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityRightCol][entityBottomRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){
@@ -46,13 +47,14 @@ public class CollisionChecker {
             }
             break;
         case "left" :
-            entityTopRow = (entityTopWorldY - entity.speed)/gPanel.tileSize;
+            entityTopRow = (entityTopWorldY - entity.speed - 3)/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityLeftCol][entityTopRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityRightCol][entityTopRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){
                 entity.collisionUpOn = true;
             }
             entityLeftCol = (entityLeftWorldX - entity.speed)/gPanel.tileSize;
+            entityTopRow = entityTopWorldY/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityLeftCol][entityTopRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityLeftCol][entityBottomRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){
@@ -60,13 +62,14 @@ public class CollisionChecker {
             }
             break;
         case "right" :
-            entityTopRow = (entityTopWorldY - entity.speed)/gPanel.tileSize;
+            entityTopRow = (entityTopWorldY - entity.speed - 3)/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityLeftCol][entityTopRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityRightCol][entityTopRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){
                 entity.collisionUpOn = true;
             }
             entityRightCol = (entityRightWorldX + entity.speed)/gPanel.tileSize;
+            entityTopRow = entityTopWorldY/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityRightCol][entityTopRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityRightCol][entityBottomRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){
