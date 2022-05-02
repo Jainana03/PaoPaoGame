@@ -9,6 +9,7 @@ import main.GamePanel;
 public class SuperObject {
     public BufferedImage image;
     public String name;
+    public String element;
     public boolean collision = false;
     public int worldX,worldY;
     public Rectangle solidArea = new Rectangle (0,0,48,48);
