@@ -2,6 +2,7 @@ package main;
 
 import object.OBJ_De;
 import object.OBJ_In;
+import object.OBJ_Nomjib;
 
 import java.util.Random;
 
@@ -68,6 +69,24 @@ public class AssetSetter {
         gPanel.obj[7].worldX = 11 * gPanel.tileSize;
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
+
+        //NomJib
+        gPanel.obj[8] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[8].worldX = 9 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 32 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[9] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[9].worldX = 10 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 15 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[10] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[10].worldX = 9 * gPanel.tileSize;
+        gPanel.obj[10].worldY = 27 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
     }
     public void setObject2(){
         //complete

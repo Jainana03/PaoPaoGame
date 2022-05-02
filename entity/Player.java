@@ -7,8 +7,10 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.awt.Rectangle;
 
+import java.util.Random;
 import java.io.IOException;
 import javax.imageio.ImageIO;
+import javax.lang.model.element.Element;
 
 public class Player extends Entity{
     GamePanel gPanel;
@@ -17,6 +19,10 @@ public class Player extends Entity{
     public final int screenX;
     public final int screenY;
     int door = 0;
+
+    Random random = new Random();
+    public int[] NJElement = {1,2,3,4};
+    public int randomNJ = random.nextInt(4);
 
     public Player(GamePanel gPanel,KeyHandler keyH){
         this.gPanel = gPanel;
@@ -295,6 +301,15 @@ public class Player extends Entity{
                     }
                     gPanel.obj[index] = null;
                     gPanel.obj[index-1] = null;
+                    break;
+                case "NomJib" :
+                    if(Power > 0){
+                        Power -= NJElement[randomNJ];
+                        if(Power < 0){
+                            Power = 0;
+                        }
+                    }
+                    
                     break;
             }
             

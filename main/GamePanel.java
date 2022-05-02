@@ -50,7 +50,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     //ENTITY AND OBJECT
     public Player player = new Player(this,keyH);
-    public SuperObject obj[] = new SuperObject[10];
+    public SuperObject obj[] = new SuperObject[15];
 
     //GAME STATE : Play, Pause and Title
     public int gameState;
@@ -175,7 +175,7 @@ public class GamePanel extends JPanel implements Runnable {
         //Title Screen
         if(gameState == titleState){
             ui.draw(g2D);
-            ui.stagelevel = 0;
+            ui.stagelevel = 1;
 
         }else if(gameState == loadingState){
             ui.draw(g2D);
