@@ -10,7 +10,7 @@ public class OBJ_De extends SuperObject{
         name = "DecreasePower";
         if(element.equals("-1")){
             try {
-                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/wood-red.png"));
+                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/minus1.png"));
                 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -19,7 +19,7 @@ public class OBJ_De extends SuperObject{
         }
         if(element.equals("-2")){
             try {
-                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/wood-red.png"));
+                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/minus2.png"));
                 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -28,7 +28,7 @@ public class OBJ_De extends SuperObject{
         }
         if(element.equals("-3")){
             try {
-                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/wood-red.png"));
+                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/minus3.png"));
                 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -37,7 +37,7 @@ public class OBJ_De extends SuperObject{
         }
         if(element.equals("-4")){
             try {
-                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/wood-red.png"));
+                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/minus4.png"));
                 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -46,7 +46,7 @@ public class OBJ_De extends SuperObject{
         }
         if(element.equals("-5")){
             try {
-                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/wood-red.png"));
+                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/minus5.png"));
                 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -55,7 +55,7 @@ public class OBJ_De extends SuperObject{
         }
         if(element.equals("/2")){
             try {
-                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/wood-red.png"));
+                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/divide2.png"));
                 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -64,7 +64,7 @@ public class OBJ_De extends SuperObject{
         }
         if(element.equals("/3")){
             try {
-                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/wood-red.png"));
+                image = ImageIO.read(getClass().getResourceAsStream("/res/objects/divide3.png"));
                 
             } catch (IOException e) {
                 e.printStackTrace();
