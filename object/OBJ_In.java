@@ -2,11 +2,15 @@ package object;
 
 import java.io.IOException;
 import javax.imageio.ImageIO;
+import java.util.Random;
 
 import main.GamePanel;
 
 public class OBJ_In extends SuperObject{
-    public OBJ_In(GamePanel gPanel,String element){
+    String[] IncreaseElementList = {"+1","+2","+3","+4","+5","x2","x3"};
+    Random r = new Random();
+    public OBJ_In(GamePanel gPanel){
+        element = IncreaseElementList[r.nextInt(6)];
         name = "IncreasePower";
         if(element.equals("+1")){
             try {
