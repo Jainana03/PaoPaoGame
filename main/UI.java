@@ -92,10 +92,20 @@ public class UI {
             }    
         }
         if(gPanel.gameState == gPanel.pauseState){
-            drawPauseScreen();
+            String text = "PAUSED";
+            showMessage(text);
+            if(messageOn){
+            g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,80F));
+            g2D.setColor(Color.white);
+            g2D.drawString(message,getXforCenteredText(text),gPanel.ScreenHeight/2);
+            messageCounter++;
+            if(messageCounter > 120){
+                messageOn = false;
+                messageCounter = 0;
+            }
+        }
         }
         if(gPanel.gameState == gPanel.loadingState){
-            score = (gPanel.player.Power*5)-(60*min-playTime)*5;
             String text = "Your score : "+dFormat.format(score);
             String text1 = "Space to continue or ESC to escape.";
             showMessage(text);
@@ -113,10 +123,18 @@ public class UI {
         }
     }
     public void drawPauseScreen(){
-        g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,80F));
-        g2D.setColor(Color.black);
         String text = "PAUSED";
-        showMessageCenter(g2D, text);
+            showMessage(text);
+            if(messageOn){
+            g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,80F));
+            g2D.setColor(Color.white);
+            g2D.drawString(message,getXforCenteredText(text),gPanel.ScreenHeight/2);
+            messageCounter++;
+            if(messageCounter > 120){
+                messageOn = false;
+                messageCounter = 0;
+            }
+        }
     }
     public void drawLoadingScreen(){
         double score = (gPanel.player.Power*5)-(60*min-playTime)*5;

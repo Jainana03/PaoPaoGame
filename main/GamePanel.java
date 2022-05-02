@@ -153,7 +153,7 @@ public class GamePanel extends JPanel implements Runnable {
                     System.out.println("gamestate : "+gameState);
                     drawCount = 0;
                 }else{
-                    System.out.println("FPS : "+drawCount);
+                    //System.out.println("FPS : "+drawCount);
                     drawCount = 0;
                 }
                 lastTimeDraw = System.currentTimeMillis();
@@ -179,7 +179,7 @@ public class GamePanel extends JPanel implements Runnable {
         }else if(gameState == loadingState){
             ui.draw(g2D);
             
-        }else if(gameState == playState){
+        }else if(gameState == playState||gameState==pauseState){
             if(ui.stagelevel > tileM.lastStageLevel){
                 filepath = tileM.randomMap();
                 tileM.loadMap(filepath);

@@ -47,6 +47,7 @@ public class EventHandler {
         return hit;
     }
     public void teleport(int gameState){
+        gPanel.ui.score = (gPanel.player.Power*10)-(60*gPanel.ui.min+gPanel.ui.playTime);
         gPanel.player.setDefaultValues();
         gPanel.tileM.randomMapsNum = random.nextInt(10);
         gPanel.gameState = gPanel.loadingState;
