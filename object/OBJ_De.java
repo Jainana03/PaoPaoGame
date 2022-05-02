@@ -2,11 +2,15 @@ package object;
 
 import java.io.IOException;
 import javax.imageio.ImageIO;
+import java.util.Random;
 
 import main.GamePanel;
 
 public class OBJ_De extends SuperObject{
-    public OBJ_De(GamePanel gPanel,String element){
+    String[] DecreaseElementList = {"-1","-2","-3","-4","-5","/2","/3"};
+    Random r = new Random();
+    public OBJ_De(GamePanel gPanel){
+        element = DecreaseElementList[r.nextInt(6)];
         name = "DecreasePower";
         if(element.equals("-1")){
             try {
