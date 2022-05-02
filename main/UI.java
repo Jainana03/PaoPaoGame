@@ -122,6 +122,7 @@ public class UI {
         if(messageOn){
             g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN,50F));
             g2D.drawString(message,getXforCenteredText(text),gPanel.ScreenHeight/2);
+            g2D.drawString("Space to continue or ESC to escape.",getXforCenteredText(text),gPanel.tileSize*11);
             messageCounter++;
             if(messageCounter > 120){
                 messageOn = false;
