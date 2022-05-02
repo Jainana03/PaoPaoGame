@@ -24,7 +24,7 @@ public class CollisionChecker {
 
         switch(entity.direction){
         case "up" :
-            entityTopRow = (entityTopWorldY - entity.speed - 3)/gPanel.tileSize;
+            entityTopRow = (entityTopWorldY - entity.upspeed)/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityLeftCol][entityTopRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityRightCol][entityTopRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){
@@ -32,7 +32,7 @@ public class CollisionChecker {
             }
             break;
         case "down" :
-            entityTopRow = (entityTopWorldY - entity.speed - 3)/gPanel.tileSize;
+            entityTopRow = (entityTopWorldY - entity.upspeed)/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityLeftCol][entityTopRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityRightCol][entityTopRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){
@@ -47,7 +47,7 @@ public class CollisionChecker {
             }
             break;
         case "left" :
-            entityTopRow = (entityTopWorldY - entity.speed - 3)/gPanel.tileSize;
+            entityTopRow = (entityTopWorldY - entity.upspeed)/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityLeftCol][entityTopRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityRightCol][entityTopRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){
@@ -62,7 +62,7 @@ public class CollisionChecker {
             }
             break;
         case "right" :
-            entityTopRow = (entityTopWorldY - entity.speed - 3)/gPanel.tileSize;
+            entityTopRow = (entityTopWorldY - entity.upspeed)/gPanel.tileSize;
             tileNum1 = gPanel.tileM.mapTileNum[entityLeftCol][entityTopRow];
             tileNum2 = gPanel.tileM.mapTileNum[entityRightCol][entityTopRow];
             if(gPanel.tileM.tile[tileNum1].collision == true || gPanel.tileM.tile[tileNum2].collision == true){

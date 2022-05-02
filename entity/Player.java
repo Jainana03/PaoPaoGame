@@ -43,6 +43,7 @@ public class Player extends Entity{
         worldY = gPanel.tileSize*48;
         Power = 2;
         speed = 2;
+        upspeed = 4;
         direction = "right";
         action = "walk";
     }
