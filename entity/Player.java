@@ -309,7 +309,7 @@ public class Player extends Entity{
                             Power = 0;
                         }
                     }
-                    
+                    gPanel.obj[index] = null;
                     break;
             }
             

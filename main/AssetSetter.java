@@ -13,6 +13,8 @@ public class AssetSetter {
     public String[] DePowerElement = {"-1","-2","-3","-4","-5","/2","/3"};
     public int randomInNum = random.nextInt(6);
     public int randomDeNum = random.nextInt(6);
+    public int randomX = random.nextInt(20);
+    public int randomY = random.nextInt(50);
     int lastRandomNum = 7;
 
     public AssetSetter(GamePanel gPanel){
@@ -73,13 +75,13 @@ public class AssetSetter {
         //NomJib
         gPanel.obj[8] = new OBJ_Nomjib(gPanel);
         gPanel.obj[8].worldX = 9 * gPanel.tileSize;
-        gPanel.obj[8].worldY = 32 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 6 * gPanel.tileSize;
         gPanel.player.randomNJ = random.nextInt(4);
 
         //NomJib
         gPanel.obj[9] = new OBJ_Nomjib(gPanel);
         gPanel.obj[9].worldX = 10 * gPanel.tileSize;
-        gPanel.obj[9].worldY = 15 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 16 * gPanel.tileSize;
         gPanel.player.randomNJ = random.nextInt(4);
 
         //NomJib
@@ -87,6 +89,38 @@ public class AssetSetter {
         gPanel.obj[10].worldX = 9 * gPanel.tileSize;
         gPanel.obj[10].worldY = 27 * gPanel.tileSize;
         gPanel.player.randomNJ = random.nextInt(4);
+
+        //randomNomJib
+        gPanel.obj[11] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[11].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[11].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[12] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[12].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[12].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[13] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[13].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[13].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[14] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[14].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[14].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
     }
     public void setObject2(){
         //complete
@@ -138,6 +172,58 @@ public class AssetSetter {
         gPanel.obj[7].worldX = 6 * gPanel.tileSize;
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
+
+        //NomJib
+        gPanel.obj[8] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[8].worldX = 6 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 14 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[9] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[9].worldX = 15 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 26 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //randomNomJib
+        gPanel.obj[10] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[10].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[10].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[11] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[11].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[11].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[12] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[12].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[12].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[13] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[13].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[13].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[14] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[14].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[14].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
 }
     public void setObject3(){
         //complete
@@ -190,6 +276,56 @@ public class AssetSetter {
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
 
+        //NomJib
+        gPanel.obj[8] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[8].worldX = 5 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 42 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[9] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[9].worldX = 6 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 16 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[10] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[10].worldX = 14 * gPanel.tileSize;
+        gPanel.obj[10].worldY = 32 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //randomNomJib
+        gPanel.obj[11] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[11].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[11].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[12] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[12].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[12].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[13] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[13].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[13].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[14] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[14].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[14].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
     }
     public void setObject4(){
         //complete
@@ -241,6 +377,58 @@ public class AssetSetter {
         gPanel.obj[7].worldX = 8 * gPanel.tileSize;
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
+
+        //NomJib
+        gPanel.obj[8] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[8].worldX = 12 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 36 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[9] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[9].worldX = 5 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 16 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //randomNomJib
+        gPanel.obj[10] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[10].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[10].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[11] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[11].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[11].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[12] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[12].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[12].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[13] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[13].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[13].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[14] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[14].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[14].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
     }
     public void setObject5(){
         //complete
@@ -292,6 +480,56 @@ public class AssetSetter {
         gPanel.obj[7].worldX = 13 * gPanel.tileSize;
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
+
+        //NomJib
+        gPanel.obj[8] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[8].worldX = 8 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 35 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[9] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[9].worldX = 12 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 23 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[10] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[10].worldX = 6 * gPanel.tileSize;
+        gPanel.obj[10].worldY = 12 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //randomNomJib
+        gPanel.obj[11] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[11].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[11].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[12] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[12].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[12].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[13] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[13].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[13].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[14] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[14].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[14].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
     }
     public void setObject6(){
         //complete
@@ -343,6 +581,58 @@ public class AssetSetter {
         gPanel.obj[7].worldX = 7 * gPanel.tileSize;
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
+
+        //NomJib
+        gPanel.obj[8] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[8].worldX = 14 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 35 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[9] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[9].worldX = 7 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 25 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //randomNomJib
+        gPanel.obj[10] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[10].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[10].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[11] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[11].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[11].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[12] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[12].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[12].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[13] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[13].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[13].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[14] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[14].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[14].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
         
     }
     public void setObject7(){
@@ -395,6 +685,56 @@ public class AssetSetter {
         gPanel.obj[7].worldX = 5 * gPanel.tileSize;
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
+
+        //NomJib
+        gPanel.obj[8] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[8].worldX = 5 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 36 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[9] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[9].worldX = 11 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 26 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[10] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[10].worldX = 14 * gPanel.tileSize;
+        gPanel.obj[10].worldY = 14 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //randomNomJib
+        gPanel.obj[11] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[11].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[11].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[12] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[12].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[12].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[13] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[13].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[13].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[14] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[14].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[14].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
     }
     public void setObject8(){
         //complete
@@ -446,6 +786,58 @@ public class AssetSetter {
         gPanel.obj[7].worldX = 14 * gPanel.tileSize;
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
+
+        //NomJib
+        gPanel.obj[8] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[8].worldX = 15 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 31 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[9] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[9].worldX = 5 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 13 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //randomNomJib
+        gPanel.obj[10] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[10].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[10].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[11] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[11].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[11].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[12] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[12].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[12].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[13] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[13].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[13].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[14] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[14].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[14].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
     }
     public void setObject9(){
         //complete
@@ -497,6 +889,58 @@ public class AssetSetter {
         gPanel.obj[7].worldX = 12 * gPanel.tileSize;
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
+
+        //NomJib
+        gPanel.obj[8] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[8].worldX = 9 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 33 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[9] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[9].worldX = 14 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 13 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //randomNomJib
+        gPanel.obj[10] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[10].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[10].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[11] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[11].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[11].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[12] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[12].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[12].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[13] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[13].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[13].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[14] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[14].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[14].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
     }
     public void setObject10(){
         //complete
@@ -548,6 +992,58 @@ public class AssetSetter {
         gPanel.obj[7].worldX = 5 * gPanel.tileSize;
         gPanel.obj[7].worldY = 9 * gPanel.tileSize;
         randomDeNum = random.nextInt(6);
+
+        //NomJib
+        gPanel.obj[8] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[8].worldX = 13 * gPanel.tileSize;
+        gPanel.obj[8].worldY = 32 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+
+        //NomJib
+        gPanel.obj[9] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[9].worldX = 5 * gPanel.tileSize;
+        gPanel.obj[9].worldY = 12 * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        
+        //randomNomJib
+        gPanel.obj[10] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[10].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[10].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[11] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[11].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[11].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[12] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[12].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[12].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[13] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[13].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[13].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
+
+        //randomNomJib
+        gPanel.obj[14] = new OBJ_Nomjib(gPanel);
+        gPanel.obj[14].worldX = randomX * gPanel.tileSize;
+        gPanel.obj[14].worldY = randomY * gPanel.tileSize;
+        gPanel.player.randomNJ = random.nextInt(4);
+        randomX = random.nextInt(20);
+        randomY = random.nextInt(50);
     }
 
         
