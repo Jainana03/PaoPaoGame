@@ -10,7 +10,6 @@ import java.awt.Rectangle;
 import java.util.Random;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import javax.lang.model.element.Element;
 
 public class Player extends Entity{
     GamePanel gPanel;
