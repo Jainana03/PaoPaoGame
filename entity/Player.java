@@ -49,7 +49,7 @@ public class Player extends Entity{
         worldY = gPanel.tileSize*48;
         Power = 2;
         speed = 2;
-        upspeed = 4;
+        upspeed = 3;
         direction = "right";
         action = "walk";
     }
@@ -100,7 +100,7 @@ public class Player extends Entity{
     }
     public void update(){
         if(!collisionUpOn){
-            worldY -= 3;
+            worldY -= upspeed;
         }
         //spriteNum use to change player animation and spriteCounter use to count for change animation on time.
         if (keyH.upPressed == true || keyH.downPressed == true||
