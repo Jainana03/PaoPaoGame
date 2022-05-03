@@ -26,7 +26,7 @@ public class UI {
     public double score = 0;
 
     public double playTime;
-    BufferedImage image,BGImage,StartButton,StartButton_C,EXITButton,EXITButton_C;
+    BufferedImage image,BGImage,HYTImage,StartButton,StartButton_C,EXITButton,EXITButton_C;
     
     int min;
     DecimalFormat dFormat = new DecimalFormat("#0.00");
@@ -68,6 +68,9 @@ public class UI {
         //Title screen
         if(gPanel.gameState == gPanel.titleState){
             drawTitleScreen();
+        }
+        if(gPanel.gameState == gPanel.HowToPlayState){
+            drawHowToPlay();
         }
         if(gPanel.gameState == gPanel.playState){
             //playstate
@@ -151,6 +154,15 @@ public class UI {
             }
         }
 
+    }
+    public void drawHowToPlay(){
+        try {
+            HYTImage = ImageIO.read(getClass().getResourceAsStream("/res/BG/HowToPlay.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("ERROR : lost How To play image");
+        }
+        g2D.drawImage(HYTImage, 0, 0, gPanel.ScreenWidth, gPanel.ScreenHeight, null);
     }
     public void drawTitleScreen(){
         //Background

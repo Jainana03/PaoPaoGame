@@ -59,6 +59,7 @@ public class GamePanel extends JPanel implements Runnable {
     public final int pauseState = 2;
     public final int optionState = 3;
     public final int loadingState = 4;
+    public final int HowToPlayState = 5;
     
     
     public GamePanel(){
@@ -176,10 +177,12 @@ public class GamePanel extends JPanel implements Runnable {
         if(gameState == titleState){
             ui.draw(g2D);
             ui.stagelevel = 1;
+            tileM.lastStageLevel = 0;
 
         }else if(gameState == loadingState){
             ui.draw(g2D);
-            
+        }else if(gameState == HowToPlayState){
+            ui.draw(g2D);
         }else if(gameState == playState||gameState==pauseState){
             if(ui.stagelevel > tileM.lastStageLevel){
                 filepath = tileM.randomMap();

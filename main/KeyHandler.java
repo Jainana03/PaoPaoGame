@@ -34,13 +34,18 @@ public class KeyHandler implements KeyListener{
             }
             if(code == KeyEvent.VK_ENTER){
                 if(gPanel.ui.commandNum == 0){
-                    gPanel.gameState = gPanel.playState;
+                    gPanel.gameState = gPanel.HowToPlayState;
                 }
                 else if(gPanel.ui.commandNum == 1){
                     System.exit(0);
                 }
             }
 
+        }
+        if(gPanel.gameState == gPanel.HowToPlayState ){
+            if(code == KeyEvent.VK_SPACE){
+                gPanel.gameState = gPanel.playState;
+            }
         }
 
         //Play State
