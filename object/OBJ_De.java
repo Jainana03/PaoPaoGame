@@ -10,7 +10,7 @@ public class OBJ_De extends SuperObject{
     String[] DecreaseElementList = {"-1","-2","-3","-4","-5","/2","/3"};
     Random r = new Random();
     public OBJ_De(GamePanel gPanel){
-        element = DecreaseElementList[r.nextInt(6)];
+        element = DecreaseElementList[r.nextInt(7)];
         name = "DecreasePower";
         if(element.equals("-1")){
             try {
