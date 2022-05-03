@@ -649,7 +649,7 @@ public class AssetSetter {
 
         //randomNomJib
         randomX = random.nextInt(7,13);
-        randomY = 14;
+        randomY = 13;
         gPanel.obj[14] = new OBJ_Nomjib(gPanel);
         gPanel.obj[14].worldX = randomX * gPanel.tileSize;
         gPanel.obj[14].worldY = randomY * gPanel.tileSize;
