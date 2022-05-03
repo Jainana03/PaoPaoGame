@@ -10,7 +10,7 @@ public class OBJ_In extends SuperObject{
     String[] IncreaseElementList = {"+1","+2","+3","+4","+5","x2","x3"};
     Random r = new Random();
     public OBJ_In(GamePanel gPanel){
-        element = IncreaseElementList[r.nextInt(6)];
+        element = IncreaseElementList[r.nextInt(7)];
         name = "IncreasePower";
         if(element.equals("+1")){
             try {
